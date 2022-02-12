@@ -1,8 +1,82 @@
-<html>
-<head>
-<title>404</title>
-</head>
-<body>
-<h1>404</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>404 - Page not found</title>
+		<meta name="description" content="14 year old mobile video game and software developer" />
+		<meta name="author" content="MrBoomDev" />
+		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Multiplayer, Mobile, Android" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="stylesheet" href="styles.css" />
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		<style>
+			#contacto {
+				padding: 6% 0;
+				margin-top: 40px;
+			}
+			@media (orientation: portrait) {
+				#contacto {
+					padding-bottom: 25%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="content">
+				<a href="index.html"><h2>MrBoom Developer</h2></a>
+				<div id="burger" onclick="toggleMenu()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html#about" onclick="menuSelected(); return true;">About</a></li>
+						<li><a href="index.html#projects" onclick="menuSelected(); return true;">Projects</a></li>
+						<li><a href="index.html#contact" onclick="menuSelected(); return true;">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="contacto">
+			<div class="content">
+				<div class="post second">
+					<div class="description">
+						<h1 class="cat_header">404</h1>
+						<p>We can’t find the page you’re looking for.</p>
+						<p>The requested URL was not found on this server.</p>
+						<a href="index.html"><button class="neon-button">Go to homepage</button></a>
+					</div>
+					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="content">
+				<ul class="second">
+					<h2>Useful links</h2>
+					<li><a href="terms.html">Terms and conditions</a></li>
+					<li><a href="privacy.html">Privacy policy</a></li>
+				</ul>
+				<ul class="second">
+					<h2>Interesting things</h2>
+					<li><a href="projects.html">Browse projects</a></li>
+					<li><a href="archive.html">Archive</a></li>
+				</ul>
+				<ul id="contact">
+					<h2>Follow me</h2>
+				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+				<li><a href="https://www.google.com/" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+				</ul>
+			</div>
+		</footer>
+		<script src="scripts.js"></script>
+	</body>
 </html>
