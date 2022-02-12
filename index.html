@@ -3,100 +3,146 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>MrBoom Developer</title>
-		<meta name="description" content="Hello, my name is Denis and I am a game developer. I am 14 years old game dev and I am currently learning the Java programming language." />
+		<meta name="description" content="14 year old mobile video game and software developer" />
 		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, FNaF, Five Nights at Freddy, Multiplayer, Android Studio, Mobile, Android" />
+		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Multiplayer, Mobile, Android" />
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
 		<link rel="manifest" href="site.webmanifest" />
 		<link rel="stylesheet" href="styles.css" />
-		<link rel="stylesheet" href="styles2.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
 	<body>
 		<header>
 			<div class="content">
 				<a href="index.html"><h2>MrBoom Developer</h2></a>
-				<div id="burger" onclick="toggleMenu(this)">
+				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
 					<div class="bar3"></div>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#contact">Contact</a></li>
+						<li><a href="index.html#about" onclick="menuSelected(); return true;">About</a></li>
+						<li><a href="index.html#projects" onclick="menuSelected(); return true;">Projects</a></li>
+						<li><a href="index.html#contact" onclick="menuSelected(); return true;">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main>
-			<div class="content">
-				<h1>Hello, i'm MrBoom</h1>
-				<p>I'm a 14 year old mobile video game and software developer.</p>
-				<a href="#contact"><button>Contact me</button></a>
+			<video id="background-video" autoplay loop muted>
+				<source src="opening.mp4" type="video/mp4">
+			</video>
+			<div id="overlay">
+				<div class="content">
+					<h1>Hello, i'm MrBoom</h1>
+					<p>14 year old mobile video game and software developer</p>
+					<a href="#projects"><button>See projects</button></a>
+				</div>
 			</div>
 		</main>
-		<section>
+		<section id="about">
 			<div class="content">
-				<h2>About me</h2>
-				<p>Hey! I'm MrBoom, a programmer and game designer from Russia, i've been making games since I was 9 years old and currently working on Five Nights at Freddy's Multiplayer (temporary title).</p>
-				<p>Here you can see some of the projects I've had the opportunity to be involved in and some personal fun stuff I've worked on.</p>
-				<p>I have always been extremely curious about the technical side of games, and sometimes this curiosity led me to reverse development, and sometimes led to new original projects.</p>
-				<h2>Portfolio</h2>
-				<p>My featured projects</p>
-				<div id="featured">
-					<a class="slide" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="mySlides fade" href="https://gamejolt.com/games/FNaF_Online_android_dlx/473617" target="_blank">
+				<div class="post">
+					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block2img-redstone.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
+					<div class="description">
+						<h2>About Me</h2>
+						<p>Junior frontend developer, I design websites and apps, write mobile applications and I've been making 2D games since I was 7.</p>
+					</div>
+				</div>
+				<div class="post second">
+					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
+					<div class="description">
+						<h2>Always online [TODO]</h2>
+						<p>Once your friends are on your approved list, all of them can access the world at any time of day, whether you’re online or not. Just create a Realm and invite them! [TODO]</p>
+					</div>
+				</div>
+				<div class="post">
+					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block4img-greatcontent.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
+					<div class="description">
+						<h2>My Knowledge</h2>
+						<p>Languages: HTML, CSS, JavaScript, NodeJS, Java and Pascal.</p>
+						<p>Frameworks: nothing yet ._.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="projects">
+			<div class="content">
+				<h2 class="cat_header">Featured projects</h2>
+				<a href="project.html#fnafm">
 						<div class="project">
-							<img src="images/banner.jpg">
+							<img alt="FNaF Multiplayer" title="FNaF Multiplayer" src="images/banner.jpg"/>
 							<h3>FNaF Multiplayer</h3>
-							<p class="description">Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации модели развития.</p>
+							<p class="description">[TODO] Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации модели развития.</p>
 							<div class="tags">
 								<h6>Platformer</h6>
-								<h6>Fan-Game</h6>
+								<h6>CodeAssist</h6>
 								<h6>2022</h6>
-								<h6>Android Studio</h6>
 							</div>
 						</div>
 					</a>
-					<a class="mySlides fade" href="https://share.catrob.at/app/project/83272" target="_blank">
-						<div class="project">
-							<img src="images/banner.jpg">
-							<h3>Bear's Kitchen</h3>
-							<p class="description">Welcome to the Bear's Kitchen. Run around the kitchen to have time to make a pizza. Choose your ingredients for pizza. Play Mini-games revealing the whole history of the kitchen.</p>
-							<div class="tags">
-								<h6>Survival</h6>
-								<h6>Fan-Game</h6>
-								<h6>2019</h6>
-								<h6>Pocket Code</h6>
-							</div>
-						</div>
-					</a>
-					<a class="slide" onclick="plusSlides(1)">&#10095;</a>
+					<a href="https://share.catrob.at/app/project/83272" target="_blank">
+				<div class="project">
+					<img alt="Bear's Kitchen" title="Bear's Kitchen" src="images/banner.jpg"/>
+					<h3>Bear's Kitchen</h3>
+					<p class="description">Welcome to the Bear's Kitchen. Run around the kitchen to have time to make a pizza. Choose your ingredients for pizza. Play Mini-games revealing the whole history of the kitchen.</p>
+					<div class="tags">
+						<h6>Survival</h6>
+						<h6>Pocket Code</h6>
+						<h6>2019</h6>
+					</div>
+				</div>
+			</a>
+			<a href="https://gamejolt.com/games/fnafnonar/462486" target="_blank">
+				<div class="project">
+					<img alt="FNaF Special Delivery" title="FNaF Special Delivery" src="images/banner.jpg"/>
+					<h3>FNaF Special Delivery</h3>
+					<p class="description">Through the game you'l subscribe to Fazbear Entertainment's brand new “Fazbear Funtime Service” and get their favorite animatronics on-demand.</p>
+					<div class="tags">
+						<h6>Non-AR</h6>
+						<h6>Sketchware</h6>
+						<h6>2020</h6>
+					</div>
+				</div>
+			</a>
+			<div class="title_button">
+				<h2>Wanna to see more?</h2>
+				<a href="projects.html"><button class="neon-button">Browse projects</button></a>
+			</div>
+			</div>
+		</section>
+		<section id="contacto">
+			<div class="content">
+				<div class="post second">
+					<div class="description">
+						<h2 class="cat_header">Contact me</h2>
+						<p>Contact me now and get a 30% discount on your new project.</p>
+						<a href="mailto:mrboomhelp@gmail.com"><button class="neon-button">Send email</button></a>
+					</div>
+					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
 				</div>
 			</div>
 		</section>
 		<footer>
 			<div class="content">
-				<ul>
-					<li><h4>About me</h4></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="index.html#skills">Skills</a></li>
-					<li><a href="index.html#about">About</a></li>
-				</ul>
-				<ul>
-					<li><h4>Follow me</h4></li>
-					<li><a href="https://vk.com/mrboomdeveloper" target="_blank">VKontakte</a></li>
-					<li><a href="#" target="_blank">Discord</a></li>
-					<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank">YouTube</a></li>
-				</ul>
-				<ul>
-					<li><h4>Useful links</h4></li>
-					<li><a href="terms.html">Terms of use</a></li>
+				<ul class="second">
+					<h2>Useful links</h2>
+					<li><a href="terms.html">Terms and conditions</a></li>
 					<li><a href="privacy.html">Privacy policy</a></li>
+				</ul>
+				<ul class="second">
+					<h2>Interesting things</h2>
+					<li><a href="projects.html">Browse projects</a></li>
+					<li><a href="archive.html">Archive</a></li>
+				</ul>
+				<ul id="contact">
+					<h2>Follow me</h2>
+				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+				<li><a href="https://www.google.com/" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>

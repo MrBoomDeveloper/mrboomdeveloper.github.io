@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+	background: #000000;
+}
+body {
+	background: rgba(102, 0, 204, 0.1);
+}
+header {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	padding-bottom: 5px;
+	background: #151515;
+	box-shadow: 0px 0px 5px #252525;
+	z-index: 999;
+}
+.content {
+	margin: auto;
+	width: 90%;
+	max-width: 700px;
+	padding: 10px 5%;
+}
+h1, h2, h3, h4, h5, h6, a, p, li, button {
+	font-family: sans-serif;
+	list-style-type: none;
+	text-decoration: none;
+	color: #FFFFFF;
+	-webkit-tap-highlight-color: transparent;
+}
+h6, a, p, li, button {
+	font-family: 'Roboto', sans-serif;
+}
+a:hover {
+	color: #FFFFFF;
+}
+header h2 {
+	float: left;
+	color: #C96FFF;
+	font-weight: 500;
+	font-size: 20px;
+}
+header nav {
+	float: right;
+}
+header ul li {
+	float: left;
+	margin-top: 2px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: 400;
+}
+header ul li a {
+	color: #f2e6ff;
+}
+#burger {
+	display: none;
+	float: right;
+	margin: 5px;
+}
+.bar1, .bar2, .bar3 {
+	height: 3px;
+	width: 25px;
+	margin-bottom: 4px;
+	background: #f2e6ff;
+	transition: 0.1s;
+}
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 6px) ;
+	transform: rotate(-45deg) translate(-6px, 6px) ;
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-4px, -4px) ;
+	transform: rotate(45deg) translate(-4px, -4px) ;
+}
+p {
+	color: #F0F0F0;
+	margin: 5px 0;
+}
+main {
+	position: relative;
+	margin-top: 35px;
+}
+video {
+	display: block;
+	width: 100%;
+	height: 350px;
+	opacity: 0.5;
+	position: relative;
+	object-fit: cover;
+	z-index: 0;
+}
+main .content {
+	width: 350px;
+	padding: 10% 0;
+	text-align: center;
+}
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+}
+main p {
+	margin: 10px 0;
+	font-size: 17px;
+}
+button {
+	padding: 10px 15px;
+	margin-top: 12px;
+	min-width: 120px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #f2e6ff;
+	font-size: 15px;
+	background: rgba(0, 0, 0, 0);
+	transition: 0.1s;
+}
+button:hover {
+	color: #000000;
+	background-color: #f2e6ff;
+	transform: scale(0.95);
+}
+#about {
+	padding-top: 25px;
+}
+#about h2 {
+	margin-bottom: 15px;
+}
+section h2 {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+.post {
+	height: 250px;
+}
+.post img {
+	width: 43%;
+	max-width: 300px;
+	object-fit: scale-down;
+	float: left;
+}
+.post .description {
+	margin-left: 70px;
+	width: 47%;
+	max-width: 320px;
+	float: left;
+}
+.post .description h2 {
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+.second .img {
+	float: right;
+}
+.second img {
+	float: right;
+}
+.second .description {
+	margin-left: 0;
+	margin-right: 70px;
+}
+#projects h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.project {
+	margin-top: 10px;
+	height: 100px;
+	padding-right: 10px;
+	overflow: hidden;
+	background: rgba(200, 200, 200, 0.05);
+	transition: 0.1s;
+}
+.project:hover {
+	background: rgba(200, 200, 200, 0.08);
+}
+.project img {
+	float: left;
+	height: 100px;
+	width: 175px;
+	margin-right: 10px;
+	object-fit: cover;
+	background: #000000;
+}
+.project h3 {
+	margin-top: 10px;
+	margin-bottom: 3px;
+	font-size: 14px;
+}
+.project .description {
+	margin-top: 5px;
+	font-size: 12px;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-clamp: 2;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+.tags {
+	margin-left: 10px;
+}
+.tags h6 {
+	float: left;
+	margin-top: 8px;
+	margin-right: 8px;
+	padding: 5px;
+	font-size: 10px;
+	font-weight: 400;
+	border-radius: 4px;
+	background: rgba(200, 200, 200, 0.1);
+}
+.title_button {
+	margin-top: 25px;
+	height: 42px;
+}
+.title_button h2 {
+	float: left;
+	vertical-align: middle;
+	line-height: 42px;
+}
+.title_button button {
+	margin: 0;
+	float: right;
+}
+#aboutme p {
+	margin-bottom: 5px;
+}
+.cat_header {
+	text-align: center;
+	font-size: 25px;
+	color: #f2e6ff;
+}
+#contacto {
+	padding-top: 25px;
+	margin-top: 50px;
+	background: rgba(102, 0, 204, 0.05);
+}
+#contacto .post {
+	margin-bottom: 0;
+	height: 200px;
+}
+#contacto h2 {
+	text-align: left;
+}
+.neon-button {
+	border-color: #C96FFF;
+	color: #C96FFF;
+}
+.neon-button:hover {
+	background: #C96FFF;
+	color: #000000;
+}
+footer {
+	padding-bottom: 25px;
+	background: rgba(0, 0, 0, 0.5);
+}
+footer .second {
+	float: right;
+	margin-left: 50px;
+}
+footer h2 {
+	margin-top: 25px;
+	font-size: 18px;
+}
+footer li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+footer a {
+	color: #f2e6ff;
+	font-size: 16px;
+	font-weight: 450;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+#contact li {
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#contact li img {
+	width: 30px;
+	height: 30px;
+	object-fit: scale-down;
+	filter: invert(40%) sepia(100%) saturate(50%) hue-rotate(234deg) brightness(95%) contrast(103%);
+}
+
+#project-page main {
+	padding: 10% 0;
+}
+#project-page main p {
+	font-size: 15px;
+}
+#project-page .tags {
+	margin: 0;
+}
+#project-page .tags h6 {
+	margin-top: 0;
+}
+/*TODO: REFACTOR ALL LINES BELOW*/
+.gallery img {
+  max-width: 100%;
+  height: 100px;
+  vertical-align: top;
+}
+.gallery {
+	display: flex;
+	margin: 15px 5%;
+	position: relative;
+	padding-top: 220px;
+}
+.imgo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.thumb {
+  padding-top: 6px;
+  margin: 6px;
+  display: block;
+}
+.gallery .selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.gallery .selector:checked + .imgo {
+  opacity: 1;
+}
+
+@media (orientation: portrait) {
+	header h2 {
+		font-size: 25px;
+	}
+	header ul li {
+		font-size: 18px;
+	}
+	#burger {
+		display: block;
+	}
+	header nav {
+		max-height: 0;
+		width: 100%;
+		overflow: hidden;
+		transition: all 0.1s ease-in;
+	}
+	.nav-active {
+		max-height: 100%;
+		padding: 10px 0;
+		padding-bottom: 25px;
+	}
+	header ul li {
+		float: none;
+		margin: 10px 0 0 0;
+	}
+	main {
+		margin-bottom: 0;
+	}
+	main .content {
+		padding: 20% 0;
+	}
+	.post {
+		margin: 25px 0;
+		height: 400px;
+	}
+	.post img {
+		min-width: 100%;
+		margin-bottom: 10px;
+	}
+	.post .description {
+		margin: 0;
+		min-width: 100%;
+	}
+	#contacto {
+		height: 450px;
+	}
+	#contacto h2 {
+		text-align: center;
+	}
+	#contacto .description {
+		text-align: center;
+		float: none;
+	}
+	#contacto p {
+		margin: auto;
+		width: 80%;
+	}
+	#contacto img {
+		margin-top: 25px;
+	}
+	footer .second {
+		margin-left: 0;
+		float: none;
+	}
+}
