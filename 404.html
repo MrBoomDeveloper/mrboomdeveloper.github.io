@@ -3,28 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>404 - Page not found</title>
-		<meta name="description" content="14 year old mobile video game and software developer" />
+		<meta name="description" content="14 year old junior front-end developer from Russia. I have been developing websites, applications and 2D games since I was 7 years old." />
 		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Multiplayer, Mobile, Android" />
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Android" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
 		<link rel="manifest" href="site.webmanifest" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="global.css" />
+		<link rel="stylesheet" href="mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
-		<style>
-			#contacto {
-				padding: 6% 0;
-				margin-top: 40px;
-			}
-			@media (orientation: portrait) {
-				#contacto {
-					padding-bottom: 25%;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<header>
@@ -37,26 +27,21 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.html#about" onclick="menuSelected(); return true;">About</a></li>
-						<li><a href="index.html#projects" onclick="menuSelected(); return true;">Projects</a></li>
-						<li><a href="index.html#contact" onclick="menuSelected(); return true;">Contact</a></li>
+						<li><a href="/#about" onclick="menuClose();">About</a></li>
+						<li><a href="/#projects" onclick="menuClose();">Projects</a></li>
+						<li><a href="/#contacto" onclick="menuClose();">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<section id="contacto">
+		<main id="first">
 			<div class="content">
-				<div class="post second">
-					<div class="description">
-						<h1 class="cat_header">404</h1>
-						<p>We can’t find the page you’re looking for.</p>
-						<p>The requested URL was not found on this server.</p>
-						<a href="index.html"><button class="neon-button">Go to homepage</button></a>
-					</div>
-					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
-				</div>
+				<h1>404</h1>
+				<p>We can’t find the page you’re looking for.<br>
+				The requested URL was not found on this server.</p>
+				<a href="/"><button>Go to homepage</button></a>
 			</div>
-		</section>
+		</main>
 		<footer>
 			<div class="content">
 				<ul class="second">

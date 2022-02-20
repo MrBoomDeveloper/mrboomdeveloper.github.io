@@ -3,15 +3,17 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>MrBoom Developer</title>
-		<meta name="description" content="14 year old mobile video game and software developer" />
+		<meta name="description" content="14 year old junior front-end developer from Russia. I have been developing websites, applications and 2D games since I was 7 years old." />
 		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Multiplayer, Mobile, Android" />
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Android" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 		<link rel="manifest" href="site.webmanifest" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="global.css" />
+		<link rel="stylesheet" href="mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 	</head>
@@ -26,119 +28,144 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.html#about" onclick="menuSelected(); return true;">About</a></li>
-						<li><a href="index.html#projects" onclick="menuSelected(); return true;">Projects</a></li>
-						<li><a href="index.html#contact" onclick="menuSelected(); return true;">Contact</a></li>
+						<li><a href="/#about" onclick="menuClose();">About</a></li>
+						<li><a href="/#projects" onclick="menuClose();">Projects</a></li>
+						<li><a href="/#contacto" onclick="menuClose();">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<main>
-			<video id="background-video" autoplay loop muted>
-				<source src="opening.mp4" type="video/mp4">
-			</video>
-			<div id="overlay">
-				<div class="content">
-					<h1>Hello, i'm MrBoom</h1>
-					<p>14 year old mobile video game and software developer</p>
-					<a href="#projects"><button>See projects</button></a>
-				</div>
+		<main id="first">
+			<div class="content">
+				<h1>Hello, i'm MrBoom</h1>
+				<p>I create programs, websites, games, mobile applications, fontend</p>
+				<a href="#projects"><button>See projects</button></a>
 			</div>
 		</main>
 		<section id="about">
 			<div class="content">
-				<div class="post">
-					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block2img-redstone.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
-					<div class="description">
-						<h2>About Me</h2>
-						<p>Junior frontend developer, I design websites and apps, write mobile applications and I've been making 2D games since I was 7.</p>
-					</div>
-				</div>
-				<div class="post second">
-					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
-					<div class="description">
-						<h2>Always online [TODO]</h2>
-						<p>Once your friends are on your approved list, all of them can access the world at any time of day, whether you’re online or not. Just create a Realm and invite them! [TODO]</p>
-					</div>
-				</div>
-				<div class="post">
-					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block4img-greatcontent.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
-					<div class="description">
-						<h2>My Knowledge</h2>
-						<p>Languages: HTML, CSS, JavaScript, NodeJS, Java and Pascal.</p>
-						<p>Frameworks: nothing yet ._.</p>
-					</div>
-				</div>
+				<h1>About me</h1>
+				<p>14 year old junior front-end developer from Russia. I have been developing websites, applications and <span>2D games</span> since I was 7 years old.</p>
+			</div>
+		</section>
+		<section id="skills">
+			<div class="content">
+				<h1>Learned skills</h1>
+				<!--
+				<h6>C++</h6>
+				<h6>C#</h6>
+				<h6>Python</h6>
+				<h6>Java</h6>
+				<h6>JavaScript</h6>
+				<h6>Pascal</h6>
+				<h6>TypeScript</h6>
+				<h6>Bootstrap</h6>
+				<h6>React</h6>
+				<h6>Vue</h6>
+				<h6>Angular</h6>
+				<h6>Node.js</h6>
+				<h6>MySQL</h6>
+				<h6>GitHub</h6>
+				<h6>PHP</h6>
+				<h6>CSS</h6> √
+				<h6>HTML</h6> √
+				-->
+				<p>I already know well: <span>HTML, CSS</span></p>
+				<p>I am currently studying: <span>JavaScript, Java, Android, GitHub</span></p>
 			</div>
 		</section>
 		<section id="projects">
 			<div class="content">
-				<h2 class="cat_header">Featured projects</h2>
-				<a href="project.html#fnafm">
-						<div class="project">
-							<img alt="FNaF Multiplayer" title="FNaF Multiplayer" src="images/banner.jpg"/>
-							<h3>FNaF Multiplayer</h3>
-							<p class="description">[TODO] Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации модели развития.</p>
-							<div class="tags">
-								<h6>Platformer</h6>
-								<h6>CodeAssist</h6>
-								<h6>2022</h6>
-							</div>
+				<h1>Featured projects</h1>
+				<a href="project#fnafm">
+					<div class="project1">
+						<img alt="FNaF Multiplayer" title="FNaF Multiplayer" src="images/fnafm.jpg"/>
+						<span class="space"></span>
+						<span>Java</span>
+						<h4>FNaF Multiplayer</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula tristique placerat. Aliquam vitae nibh dapibus, fermentum orci eu, venenatis urna. Nulla sit amet est sed sapien pulvinar posuere.</p>
+					</div>
+				</a>
+				<a href="https://share.catrob.at/app/project/83272" target="_blank">
+					<div class="project1">
+						<img alt="Bear's Kitchen" title="Bear's Kitchen" src="images/kitchen.jpg"/>
+						<span class="space"></span>
+						<span>Scratch</span>
+						<h4>Bear's Kitchen</h4>
+						<p>Welcome to the Bear's Kitchen. Run around the kitchen to have time to make a pizza. Choose your ingredients for pizza. Play Mini-games revealing the whole history of the kitchen.</p>
+					</div>
+				</a>
+				<a href="project#asm">
+					<div class="project1">
+						<img alt="Android Studio Mobile" title="Android Studio Mobile" src="images/asm.jpg"/>
+						<span class="space"></span>
+						<span>Java</span>
+						<h4>Android Studio Mobile</h4>
+						<p>Android Studio is the official IDE for Android app development. On top of IntelliJ's powerful code editor and even more features that enhance your productivity when building Android apps.</p>
+					</div>
+				</a>
+				
+			<div id="hidden-projects">
+				<a href="https://gamejolt.com/games/fnafnonar/462486" target="_blank">
+					<div class="project">
+						<img alt="FNaF Special Delivery" title="FNaF Special Delivery" src="images/fnafar.jpg"/>
+						<h3>FNaF Special Delivery</h3>
+						<p class="description">Through the game you'l subscribe to Fazbear Entertainment's brand new “Fazbear Funtime Service” and get their favorite animatronics on-demand.</p>
+						<div class="tags">
+							<h6>Survival</h6>
+							<h6>Java</h6>
+							<h6>2020</h6>
 						</div>
-					</a>
-					<a href="https://share.catrob.at/app/project/83272" target="_blank">
-				<div class="project">
-					<img alt="Bear's Kitchen" title="Bear's Kitchen" src="images/banner.jpg"/>
-					<h3>Bear's Kitchen</h3>
-					<p class="description">Welcome to the Bear's Kitchen. Run around the kitchen to have time to make a pizza. Choose your ingredients for pizza. Play Mini-games revealing the whole history of the kitchen.</p>
-					<div class="tags">
-						<h6>Survival</h6>
-						<h6>Pocket Code</h6>
-						<h6>2019</h6>
 					</div>
-				</div>
-			</a>
-			<a href="https://gamejolt.com/games/fnafnonar/462486" target="_blank">
-				<div class="project">
-					<img alt="FNaF Special Delivery" title="FNaF Special Delivery" src="images/banner.jpg"/>
-					<h3>FNaF Special Delivery</h3>
-					<p class="description">Through the game you'l subscribe to Fazbear Entertainment's brand new “Fazbear Funtime Service” and get their favorite animatronics on-demand.</p>
-					<div class="tags">
-						<h6>Non-AR</h6>
-						<h6>Sketchware</h6>
-						<h6>2020</h6>
+				</a>
+				<a href="https://gamejolt.com/games/sniffsimandroid/504854" target="_blank">
+					<div class="project">
+						<img src="images/sniff.jpg">
+						<h3>FNaF Sniffing Simulator</h3>
+						<p class="description">Are you want hug Bonnie? No!?<br>You Will Die!</p>
+						<div class="tags">
+							<h6>Simulator</h6>
+							<h6>Java</h6>
+							<h6>2020</h6>
+						</div>
 					</div>
-				</div>
-			</a>
-			<div class="title_button">
+				</a>
+				<a href="https://share.catrob.at/app/project/93902" target="_blank">
+					<div class="project">
+						<img src="https://share.catrob.at/resources/screenshots/screen_93902.png?t=1598101145&v=3.20.33"">
+						<h3>FNaF 4 Pixel Remake</h3>
+						<p class="description">Play as crying child in this uhm... 2d game.<br>These pocket code games so laggy.</p>
+						<div class="tags">
+							<h6>Simulator</h6>
+							<h6>Scratch</h6>
+							<h6>2019</h6>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div id="load-more">
 				<h2>Wanna to see more?</h2>
-				<a href="projects.html"><button class="neon-button">Browse projects</button></a>
+				<button onclick="loadMore();">Load more</button>
 			</div>
 			</div>
 		</section>
-		<section id="contacto">
+		<main id="contacto">
 			<div class="content">
-				<div class="post second">
-					<div class="description">
-						<h2 class="cat_header">Contact me</h2>
-						<p>Contact me now and get a 30% discount on your new project.</p>
-						<a href="mailto:mrboomhelp@gmail.com"><button class="neon-button">Send email</button></a>
-					</div>
-					<img src="https://www.minecraft.net/content/dam/games/minecraft/realms/realms-features-block3img-flyingalex.png.transform/minecraft-image-small/image.png" alt="PLACEHOLDER" title="PLACEHOLDER"/>
-				</div>
+				<h1>Contact me</h1>
+				<p>Do you have any questions or want to work with me? You can contact me by email.</p>
+				<a href="mailto:mrboomhelp@gmail.com"><button>Send email</button></a>
 			</div>
-		</section>
+		</main>
 		<footer>
 			<div class="content">
 				<ul class="second">
 					<h2>Useful links</h2>
-					<li><a href="terms.html">Terms and conditions</a></li>
-					<li><a href="privacy.html">Privacy policy</a></li>
+					<li><a href="terms">Terms and conditions</a></li>
+					<li><a href="privacy">Privacy policy</a></li>
 				</ul>
 				<ul class="second">
 					<h2>Interesting things</h2>
-					<li><a href="projects.html">Browse projects</a></li>
-					<li><a href="archive.html">Archive</a></li>
+					<li><a href="archive">Archive</a></li>
 				</ul>
 				<ul id="contact">
 					<h2>Follow me</h2>
