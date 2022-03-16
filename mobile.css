@@ -1,29 +1,10 @@
 @media (orientation: portrait) {
 	.content {
-		width: 80%;
-		padding: 10px 10%;
-	}
-	header h2 {
-		font-size: 22px;
-	}
-	header nav {
-		max-height: 0;
-		width: 100%;
-		overflow: hidden;
-		transition: all 0.1s ease-in;
-	}
-	header .nav-active {
-		margin-top: 10px;
-		max-height: 100%;
-		padding: 10px 0;
-	}
-	header nav ul li {
-		float: none;
-		margin-top: 2px;
-		margin-left: 0;
-		font-size: 17px;
+		width: 95%;
 	}
 	#burger {
+		margin: 25px;
+    	float: right;
 		display: block;
 	}
 	.bar1, .bar2, .bar3 {
@@ -44,8 +25,23 @@
 		-webkit-transform: rotate(45deg) translate(-4px, -4px) ;
 		transform: rotate(45deg) translate(-4px, -4px) ;
 	}
-	#first {
-		padding: 35% 0;
+	/*
+	header nav {
+		max-height: 0;
+		width: 100%;
+		overflow: hidden;
+		transition: all 0.1s ease-in;
+	}
+	header .nav-active {
+		margin-top: 10px;
+		max-height: 100%;
+		padding: 10px 0;
+	}
+	header nav ul li {
+		float: none;
+		margin-top: 2px;
+		margin-left: 0;
+		font-size: 17px;
 	}
 	section {
 		padding: 10% 0;
@@ -82,5 +78,5 @@
 		float: none;
 		margin-left: 0;
 		margin-bottom: 25px;
-	}
+	}*/
 }

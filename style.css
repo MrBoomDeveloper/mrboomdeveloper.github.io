@@ -1,0 +1,62 @@
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+.header-scrolled {
+	box-shadow: 0px 0px 5px rgba(126, 126, 126, 0.1);
+    background: rgba(16, 0, 23, 0.95);
+}
+header h2 {
+    float: left;
+    line-height: 64px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #D05EFC;
+}
+header li a {
+    margin-left: 25px;
+    float: right;
+    line-height: 64px;
+    text-align: center;
+	font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+#burger {
+    display: none;
+}
+.column {
+    max-width: 500px;
+}
+main p {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+footer .second {
+	float: right;
+	margin-left: 50px;
+}
+footer ul li {
+	margin: 6px 0;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer #follow li {
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+footer #follow li img {
+	width: 30px;
+	height: 30px;
+	object-fit: scale-down;
+	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(100%) contrast(103%);
+	transition: 0.2s;
+}
+footer #follow li img:hover {
+	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(125%) contrast(103%);
+}

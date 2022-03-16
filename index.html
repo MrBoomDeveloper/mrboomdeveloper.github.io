@@ -2,7 +2,7 @@
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8" />
-		<title>MrBoom Developer</title>
+		<title>MrBoomDev</title>
 		<meta name="description" content="14 year old junior front-end developer from Russia. I have been developing websites, applications and 2D games since I was 7 years old." />
 		<meta name="author" content="MrBoomDev" />
 		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Android" />
@@ -12,7 +12,14 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 		<link rel="manifest" href="site.webmanifest" />
-		<link rel="stylesheet" href="global.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="default.css" />
+		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
@@ -20,7 +27,7 @@
 	<body>
 		<header>
 			<div class="content">
-				<a href="index.html"><h2>MrBoom Developer</h2></a>
+				<a href="/"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -28,20 +35,46 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="/#about" onclick="menuClose();">About</a></li>
-						<li><a href="/#projects" onclick="menuClose();">Projects</a></li>
-						<li><a href="/#contacto" onclick="menuClose();">Contact</a></li>
+						<li><a href="/#contact" onclick="menuClose();">Написать мне</a></li>
+						<li><a href="/#projects" onclick="menuClose();">Мои проекты</a></li>
+						<li><a href="/#about" onclick="menuClose();">Обо мне</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<main id="first">
+		<main>
 			<div class="content">
-				<h1>Hello, i'm MrBoom</h1>
-				<p>I create programs, websites, games, mobile applications, fontend</p>
-				<a href="#projects"><button>See projects</button></a>
+				<div class="column">
+					<h1>Приветик, я MrBoomDev</h1>
+					<p>Заметка: написать здесь какой-нибудь интересный текст обо мне. Если я не напишу хороший текст, то будет кактось не тактось.</p>
+					<a href="#projects"><button>Взглянуть на проекты</button></a>
+				</div>
 			</div>
 		</main>
+		<footer>
+			<div class="content">
+				<ul class="second">
+					<h4>Ваши данные</h4>
+					<li><a href="terms">Пользовательское соглашение</a></li>
+					<li><a href="privacy">Политика конфиденциальности</a></li>
+				</ul>
+				<ul class="second">
+					<h4>Интересные ссылки</h4>
+					<li><a href="archive">Архив времени</a></li>
+				</ul>
+				<ul id="follow">
+					<h4>Подписывайтесь на меня</h4>
+				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+				</ul>
+			</div>
+		</footer>
+
+
+
+
+		<!--
 		<section id="about">
 			<div class="content">
 				<h1>About me</h1>
@@ -51,7 +84,6 @@
 		<section id="skills">
 			<div class="content">
 				<h1>Learned skills</h1>
-				<!--
 				<h6>C++</h6>
 				<h6>C#</h6>
 				<h6>Python</h6>
@@ -69,7 +101,6 @@
 				<h6>PHP</h6>
 				<h6>CSS</h6> √
 				<h6>HTML</h6> √
-				-->
 				<p>I already know well: <span>HTML, CSS, Java</span></p>
 				<p>I am currently studying: <span>JavaScript, Android, GitHub</span></p>
 			</div>
@@ -155,26 +186,7 @@
 				<p>Do you have any questions or want to work with me? You can contact me by email.</p>
 				<a href="mailto:mrboomhelp@gmail.com"><button>Send email</button></a>
 			</div>
-		</main>
-		<footer>
-			<div class="content">
-				<ul class="second">
-					<h2>Useful links</h2>
-					<li><a href="terms">Terms and conditions</a></li>
-					<li><a href="privacy">Privacy policy</a></li>
-				</ul>
-				<ul class="second">
-					<h2>Interesting things</h2>
-					<li><a href="archive">Archive</a></li>
-				</ul>
-				<ul id="contact">
-					<h2>Follow me</h2>
-				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com/" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
-				</ul>
-			</div>
-		</footer>
+		</main>-->
 		<script src="scripts.js"></script>
 	</body>
 </html>

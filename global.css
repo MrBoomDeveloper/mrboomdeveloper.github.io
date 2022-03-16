@@ -1,106 +1,13 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-::selection {
-	color: #f2e6ff;
-	background: rgba(102, 0, 204, 0.25);
-}
-h1, h2, h3, h4, h5, h6, a, p, li, button {
-	font-family: sans-serif;
-	list-style-type: none;
-	text-decoration: none;
-	color: #FFFFFF;
-	-webkit-tap-highlight-color: transparent;
-}
-h1 {
-	margin-bottom: 12px;
-}
-a:hover {
-	color: #FFFFFF;
-}
-button {
-	min-width: 120px;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 2px;
-	padding: 10px 25px;
-	font-size: 16px;
-	border-color: #D05EFC;
-	color: #D05EFC;
-	background: rgba(0, 0, 0, 0);
-	transition: 0.1s;
-}
-button:hover {
-	color: #000000;
-	background: #D05EFC;
-	transform: scale(0.95);
-}
-p {
-	line-height: 25px;
-	font-size: 18px;
-	color: #E0E0E0;
-}
+/*remove this file*/
+
 span {
 	color: #D05EFC;
 }
 .content {
-	margin: auto;
-	width: 90%;
-	max-width: 700px;
-	padding: 10px 5%;
 	animation: fadeIn 1.5s;
 }
-
-html {
-	background: #000000;
-	scroll-behavior: smooth;
-}
-body {
-	background: rgba(102, 0, 204, 0.1);
-}
 header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	padding: 5px 0;
 	z-index: 999;
-	transition: 0.25s;
-}
-.header-scrolled {
-	box-shadow: 0px 0px 5px #222222;
-	background: rgba(13, 6, 19, 0.95);
-}
-header h2 {
-	float: left;
-	font-size: 20px;
-	font-weight: 500;
-	color: #D05EFC;
-}
-header nav {
-	float: right;
-}
-header nav ul li {
-	float: left;
-	margin-top: 2px;
-	margin-left: 10px;
-	font-size: 15px;
-	font-weight: 400;
-}
-header nav ul li a {
-	color: #f2e6ff;
-}
-#burger {
-	display: none;
-	float: right;
-	margin: 5px;
-}
-.bar1, .bar2, .bar3 {
-	height: 3px;
-	width: 25px;
-	margin-bottom: 4px;
-	background: #f2e6ff;
-	transition: 0.1s;
 }
 .change .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-6px, 6px) ;
@@ -112,16 +19,6 @@ header nav ul li a {
 .change .bar3 {
 	-webkit-transform: rotate(45deg) translate(-4px, -4px) ;
 	transform: rotate(45deg) translate(-4px, -4px) ;
-}
-main {
-	padding: 15% 0;
-	background: rgba(0, 0, 0, 0.2);
-}
-main p {
-	max-width: 400px;
-	margin-bottom: 18px;
-	line-height: 27px;
-	font-size: 20px;
 }
 section {
 	padding: 8% 0;
@@ -188,9 +85,6 @@ section h1 {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
-
-
-/*REMOVE AFTER REFACTOR*/
 .project-beta {
 	margin: 25px 0;
 	border-style: solid;
@@ -250,9 +144,6 @@ section h1 {
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
 }
-
-
-
 .tags {
 	margin-left: 10px;
 }
@@ -306,51 +197,7 @@ section h1 {
 #contacto p {
 	font-size: 18px;
 }
-footer {
-	padding: 5% 0;
-	background: rgba(0, 0, 0, 0.5);
-}
-footer .second {
-	float: right;
-	margin-left: 50px;
-}
-footer h2 {
-	font-size: 18px;
-}
-footer ul li {
-	margin: 6px 0;
-}
-footer a {
-	font-size: 16px;
-	font-weight: 450;
-	color: #f2e6ff;
-}
-footer a:hover {
-	text-decoration: underline;
-}
-footer #contact li {
-	display: inline-block;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-footer #contact li img {
-	width: 30px;
-	height: 30px;
-	object-fit: scale-down;
-	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(100%) contrast(103%);
-	transition: 0.2s;
-}
-footer #contact li img:hover {
-	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(125%) contrast(103%);
-}
-
 @media (orientation: portrait) {
-	header h2 {
-		font-size: 22px;
-	}
-	header ul li {
-		font-size: 18px;
-	}
 	header nav {
 		max-height: 0;
 		width: 100%;
@@ -366,11 +213,7 @@ footer #contact li img:hover {
 		margin: 10px 0 15px 0;
 		font-size: 20px;
 	}
-	#burger {
-		display: block;
-	}
 }
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -379,9 +222,6 @@ footer #contact li img:hover {
 		opacity: 1;
 	}
 }
-
-
-/*
 .post {
 	height: 250px;
 }
@@ -429,8 +269,6 @@ footer #contact li img:hover {
 .archived h2 {
 	font-size: 18px;
 }
-
-
 #project-page main {
 	padding: 10% 0;
 }
@@ -443,8 +281,6 @@ footer #contact li img:hover {
 #project-page .tags h6 {
 	margin-top: 0;
 }
-
-
 .gallery img {
   max-width: 100%;
   height: 100px;
@@ -476,8 +312,6 @@ footer #contact li img:hover {
 .gallery .selector:checked + .imgo {
   opacity: 1;
 }
-
-VERTICAL SCREEN ORIENTATION
 	.post {
 		margin: 25px 0;
 		height: 400px;
@@ -498,5 +332,3 @@ VERTICAL SCREEN ORIENTATION
 		object-fit: cover;
 		height: 200px;
 	}
-}
-*/
