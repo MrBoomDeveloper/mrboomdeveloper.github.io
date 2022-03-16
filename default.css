@@ -3,11 +3,13 @@
     padding: 0;
 }
 html {
+	height: 100%;
 	background: #000000;
 	scrollbar-color: rgba(126, 126, 126, 0.5) #0d001a;
 	scroll-behavior: smooth;
 }
 body {
+	height: 100%;
 	background: rgba(139, 0, 204, 0.1);
 }
 header {
