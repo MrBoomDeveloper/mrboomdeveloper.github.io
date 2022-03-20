@@ -55,6 +55,7 @@ section p {
 	grid-gap: 2vw;
 }
 .project {
+	min-height: 325px;
 	margin-top: 25px;
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -62,6 +63,8 @@ section p {
 }
 .project img {
 	width: 100%;
+	height: 200px;
+	object-fit: cover;
 }
 .project figcaption {
 	padding: 12px 20px 20px 12px;
