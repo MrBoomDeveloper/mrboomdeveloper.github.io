@@ -3,19 +3,19 @@
 		padding: 0 50px;
 	}
 	.grid {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 33% 33% 33%;
 	}
 }
 
 @media screen and (max-width: 900px) {
 	.grid {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 49% 49%;
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 	}
 }
 
