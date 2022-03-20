@@ -70,6 +70,9 @@
 	main {
 		padding: 35% 0 25% 0;
 	}
+	.project {
+		min-height: auto;
+	}
 	footer {
 		padding: 10% 0 5% 0;
 	}
