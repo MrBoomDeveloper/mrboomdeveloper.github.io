@@ -73,7 +73,6 @@ fixBrokenImages = function( url ){
 
 function loaded() {
 	reveal();
-	window.location.hash = "";
 	window.scroll(0, 0);
 	fixBrokenImages('./images/not_found.jpg');
 }
