@@ -19,7 +19,7 @@
 	}
 }
 
-@media (orientation: portrait) {
+@media screen and (max-width: 500px) {
 	.content {
 		width: 85%;
 		padding: 0;
