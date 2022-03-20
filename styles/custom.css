@@ -51,8 +51,8 @@ section p {
 }
 .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 2vw;
+	grid-template-columns: 240px 240px 240px 240px;
+	grid-gap: 10px;
 }
 .project {
 	min-height: 325px;
