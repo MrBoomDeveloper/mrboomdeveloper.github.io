@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ru">
 	<head>
+		<!--Meta data-->
+		<title>404 - Страница не найдена</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+		<link rel="manifest" href="./site.webmanifest">
+		
+		<!--GoogleBot-->
+			<meta name="description" content="Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки." />
+		<meta name="robots" content="noindex">
+		
+		<!--Makes site beautiful-->
 		<meta charset="utf-8" />
-		<title>404 - MrBoom Developer</title>
-		<meta name="description" content="14 year old junior front-end developer from Russia. I have been developing websites, applications and 2D games since I was 7 years old." />
-		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Android" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-		<link rel="manifest" href="site.webmanifest" />
-		<link rel="stylesheet" href="./global.css" />
-		<link rel="stylesheet" href="mobile.css" />
+		<meta name="theme-color" content="#ffffff">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/default.css" />
+		<link rel="stylesheet" href="./styles/custom.css" />
+		<link rel="stylesheet" href="./styles/mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 	</head>
-	<body>
-		<header>
+	<body onload="loaded();">
+		<header class="reveal">
 			<div class="content">
-				<a href="https://mrboomdeveloper.github.io"><h2>MrBoom Developer</h2></a>
+				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -27,40 +38,42 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="https://mrboomdeveloper.github.io/#about" onclick="menuClose();">About</a></li>
-						<li><a href="https://mrboomdeveloper.github.io/#projects" onclick="menuClose();">Projects</a></li>
-						<li><a href="https://mrboomdeveloper.github.io/#contacto" onclick="menuClose();">Contact</a></li>
+						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
+						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
+						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<main id="first">
+		<main>
 			<div class="content">
-				<h1>404</h1>
-				<p>We can’t find the page you’re looking for.<br>
-				The requested URL was not found on this server.</p>
-				<a href="https://mrboomdeveloper.github.io"><button>Go to homepage</button></a>
+				<div class="column reveal">
+					<h1>404 - Страница не найдена!</h1>
+					<p>Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки.</p>
+					<a href="./"><button>Перейти на главную</button></a>
+				</div>
 			</div>
 		</main>
 		<footer>
 			<div class="content">
 				<ul class="second">
-					<h2>Useful links</h2>
-					<li><a href="https://mrboomdeveloper.github.io/terms">Terms and conditions</a></li>
-					<li><a href="https://mrboomdeveloper.github.io/privacy">Privacy policy</a></li>
+					<h4>Ваши данные</h4>
+					<li><a href="./terms">Пользовательское соглашение</a></li>
+					<li><a href="./privacy">Политика конфиденциальности</a></li>
 				</ul>
 				<ul class="second">
-					<h2>Interesting things</h2>
-					<li><a href="https://mrboomdeveloper.github.io/archive">Archive</a></li>
+					<h4>Интересные ссылки</h4>
+					<li><a href="./archive#projects">Больше проектов</a></li>
+					<li><a href="./archive">Архив данных</a></li>
 				</ul>
-				<ul id="contact">
-					<h2>Follow me</h2>
+				<ul id="follow">
+					<h4>Подписывайтесь на меня</h4>
 				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
 				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com/" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="scripts.js"></script>
+		<script src="./scripts/main.js"></script>
 	</body>
 </html>

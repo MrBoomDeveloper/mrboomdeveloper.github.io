@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ru">
 	<head>
-		<meta charset="utf-8" />
-		<title>MrBoom Developer - Archive</title>
-		<meta name="description" content="14 year old mobile video game and software developer" />
+		<!--Meta data-->
+		<title>MrBoomDev - Архив данных</title>
+		<meta name="description" content="На этом разделе сайта вы сможете увидеть все мои работы, которые мне удалось сохранить." />
 		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Multiplayer, Mobile, Android" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-		<link rel="manifest" href="site.webmanifest" />
-		<link rel="stylesheet" href="styles.css" />
-		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+		<link rel="manifest" href="./site.webmanifest">
+		
+		<!--GoogleBot-->
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Мистер, Мр, Бум, Боом, Мистр, МрБум, МистерБум" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		
+		<!--Makes site beautiful-->
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#ffffff">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/default.css" />
+		<link rel="stylesheet" href="./styles/custom.css" />
+		<link rel="stylesheet" href="./styles/mobile.css" />
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
-	<style>
-		#overlay {
-			position: static;
-		}
-	</style>
-	<body>
-		<header>
+	<body onload="loaded();">
+		<header class="reveal">
 			<div class="content">
-				<a href="index.html"><h2>MrBoom Developer</h2></a>
+				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -31,25 +40,82 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="index.html#about" onclick="menuSelected(); return true;">About</a></li>
-						<li><a href="index.html#projects" onclick="menuSelected(); return true;">Projects</a></li>
-						<li><a href="index.html#contact" onclick="menuSelected(); return true;">Contact</a></li>
+						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
+						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
+						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main>
-			<div id="overlay">
-				<div class="content">
-					<h1>Welcome to the Archive</h1>
-					<p>All my old sites, lost projects and abandoned accounts are stored here</p>
-					<a href="#contact"><button class="neon-button">Lets go</button></a>
+			<div class="content">
+				<div class="column reveal">
+					<h1>Добро Пожаловать в Архив данных!</h1>
+					<p>На этом разделе сайта вы сможете увидеть все мои работы, которые мне удалось сохранить.</p>
+					<a href="#projects"><button>Взглянуть на работы</button></a>
 				</div>
 			</div>
 		</main>
-		<section id="about">
+		<section id="projects">
 			<div class="content">
-				<a href="http://mrboom1.simplesite.com/442672397">
+				<h2 class="reveal">Мои работы</h2>
+				<div class="grid">
+					<a href="https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w">
+						<figure class="project reveal">
+							<img title="Jollibee's Multiplayer" src="images/jolli.jpg"/>
+							<figcaption>
+								<h3>Jollibee's Multiplayer</h3>
+								<p class="markup">Java, Firebase</p>
+								<p>https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a href="https://youtube.com/watch?v=FSXiqyCmsj0">
+						<figure class="project reveal">
+							<img title="Scott in Space мобильный порт" src="images/space.jpg"/>
+							<figcaption>
+								<h3>Scott in Space мобильный порт</h3>
+								<p class="markup">Pocket Code</p>
+								<p>https://youtube.com/watch?v=FSXiqyCmsj0</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a href="https://mrboom1.gamejolt.io/ucnmeme/">
+						<figure class="project reveal">
+							<img title="Сайт для Ultimate Custom Night Meme Edition" src="images/site2.jpg"/>
+							<figcaption>
+								<h3>Сайт для Ultimate Custom Night Meme Edition</h3>
+								<p class="markup">HTML, CSS</p>
+								<p>https://mrboom1.gamejolt.io/ucnmeme/</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a href="https://mrboom1.gamejolt.io" target="_blank">
+						<figure class="project reveal">
+							<img title="Мой самый первый сайт" src="images/site1.jpg"/>
+							<figcaption>
+								<h3>Мой самый первый сайт</h3>
+								<p class="markup">HTML, CSS</p>
+								<p>https://mrboom1.gamejolt.io/</p>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</section>
+		
+		<!--<section id="about">
+			<div class="content">
+				<a href="https://youtube.com/channel/UC4NsaQQsHqs7-TEQ_xaYXuw" target="_blank">
+					<div class="post archived">
+						<img src="images/yt.jpg" title="YouTube channel" alt="YouTube channel"/>
+						<div class="description">
+							<h2>YouTube channel</h2>
+							<p>https://youtube.com/channel/UC4NsaQQsHqs7-TEQ_xaYXuw</p>
+						</div>
+					</div>
+				</a>
+				<a href="http://mrboom1.simplesite.com/442672397" target="_blank">
 					<div class="post archived">
 						<img src="images/simplesite.jpg" title="Site #3" alt="Site #3"/>
 						<div class="description">
@@ -58,7 +124,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="https://www.instagram.com/p/BzKj3P6BX16/">
+				<a href="https://www.instagram.com/p/BzKj3P6BX16/" target="_blank">
 					<div class="post archived">
 						<img src="images/helpwanted.jpg" title="FNaF HW Android" alt="FNaF HW Android"/>
 						<div class="description">
@@ -67,7 +133,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="https://www.instagram.com/mrboomdeveloper/">
+				<a href="https://www.instagram.com/mrboomdeveloper/" target="_blank">
 					<div class="post archived">
 						<img src="images/instagram.jpg" title="Instagram account" alt="Instagram account"/>
 						<div class="description">
@@ -76,7 +142,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="https://twitter.com/mrboomofficial">
+				<a href="https://twitter.com/mrboomofficial" target="_blank">
 					<div class="post archived">
 						<img src="images/twitter.jpg" title="Twitter account" alt="Twitter account"/>
 						<div class="description">
@@ -85,64 +151,28 @@
 						</div>
 					</div>
 				</a>
-				<a href="https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w">
-					<div class="post archived">
-						<img src="images/jollibees.webp" title="Jollibees Multiplayer" alt="Jollibees Multiplayer"/>
-						<div class="description">
-							<h2>Jollibees Multiplayer</h2>
-							<p>https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://youtube.com/watch?v=FSXiqyCmsj0">
-					<div class="post archived">
-						<img src="images/space.jpg" title="Scott in Space Mobile" alt="Scott in Space Mobile"/>
-						<div class="description">
-							<h2>Scott in Space Mobile Port</h2>
-							<p>https://youtube.com/watch?v=FSXiqyCmsj0</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://mrboom1.gamejolt.io/ucnmeme/">
-					<div class="post archived">
-						<img src="images/site2.jpg" title="Site #2" alt="Site #2"/>
-						<div class="description">
-							<h2>Ultimate Custom Night Meme Edition</h2>
-							<p>https://mrboom1.gamejolt.io/ucnmeme/</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://mrboom1.gamejolt.io/">
-					<div class="post archived">
-						<img src="images/site1.jpg" alt="mrboom1.gamejolt.io" title="Site #1" alt="Site #1"/>
-						<div class="description">
-							<h2>My very first website</h2>
-							<p>https://mrboom1.gamejolt.io/</p>
-						</div>
-					</div>
-				</a>
 			</div>
-		</section>
+		</section>-->
 		<footer>
 			<div class="content">
 				<ul class="second">
-					<h2>Useful links</h2>
-					<li><a href="terms.html">Terms and conditions</a></li>
-					<li><a href="privacy.html">Privacy policy</a></li>
+					<h4>Ваши данные</h4>
+					<li><a href="./terms">Пользовательское соглашение</a></li>
+					<li><a href="./privacy">Политика конфиденциальности</a></li>
 				</ul>
 				<ul class="second">
-					<h2>Interesting things</h2>
-					<li><a href="projects.html">Browse projects</a></li>
-					<li><a href="archive.html">Archive</a></li>
+					<h4>Интересные ссылки</h4>
+					<li><a href="./archive#projects">Больше проектов</a></li>
+					<li><a href="./archive">Архив данных</a></li>
 				</ul>
-				<ul id="contact">
-					<h2>Follow me</h2>
+				<ul id="follow">
+					<h4>Подписывайтесь на меня</h4>
 				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
 				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com/" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="scripts.js"></script>
+		<script src="./scripts/main.js"></script>
 	</body>
 </html>

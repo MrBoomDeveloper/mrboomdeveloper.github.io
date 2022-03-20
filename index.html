@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ru">
 	<head>
-		<meta charset="utf-8" />
+		<!--Meta data-->
 		<title>MrBoomDev</title>
-		<meta name="description" content="14 year old junior front-end developer from Russia. I have been developing websites, applications and 2D games since I was 7 years old." />
+		<meta name="description" content="Привет! Я 14-летний джуниор фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
 		<meta name="author" content="MrBoomDev" />
-		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Android" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<link rel="manifest" href="site.webmanifest" />
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+		<link rel="manifest" href="./site.webmanifest">
+		
+		<!--GoogleBot-->
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Мистер, Мр, Бум, Боом, Мистр, МрБум, МистерБум" />
+		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		
+		<!--Makes site beautiful-->
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#ffffff">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="default.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="mobile.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/default.css" />
+		<link rel="stylesheet" href="./styles/custom.css" />
+		<link rel="stylesheet" href="./styles/mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 	</head>
-	<body>
-		<header>
+	<body onload="loaded();">
+		<header class="reveal">
 			<div class="content">
-				<a href="/"><h2>MrBoomDev</h2></a>
+				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -35,32 +40,81 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="/#contact" onclick="menuClose();">Написать мне</a></li>
-						<li><a href="/#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="/#about" onclick="menuClose();">Обо мне</a></li>
+						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
+						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
+						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main>
 			<div class="content">
-				<div class="column">
-					<h1>Приветик, я MrBoomDev</h1>
-					<p>Заметка: написать здесь какой-нибудь интересный текст обо мне. Если я не напишу хороший текст, то будет кактось не тактось.</p>
+				<div class="column reveal">
+					<h1>Привет!</h1>
+					<p>Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет.</p>
 					<a href="#projects"><button>Взглянуть на проекты</button></a>
 				</div>
 			</div>
 		</main>
+		<section id="about" class="reveal">
+			<div class="content">
+				<h2>Обо мне</h2>
+				<p>Моё имя Денис и я разработчик программного обеспечения, веб-сайтов и приложений для Android. Я без ума от кофе. Я разрабатываю приложения для развлечения, а некоторые из моих других увлечений — ведение блога, YouTube и чтение книг. Я разработал множество программ и игр на различных яп. Программировать же я начал в возрасте 9 лет, когда меня увлекали мобильные игры.</p>
+			</div>
+		</section>
+		<section class="reveal">
+			<div class="content">
+				<h2>Мои навыки</h2>
+				<p>Языки: Java, JS, CSS, HTML.
+				<br>Библиотеки: Android, Firebase
+				<br>Направления: Дизайн, Фронтенд</p>
+			</div>
+		</section>
+		<section id="projects">
+			<div class="content">
+				<h2 class="reveal">Мои проекты</h2>
+				<div class="grid">
+					<a href="./404">
+						<figure class="project reveal">
+							<img title="Droid Studio" src="images/droid_studio.jpg"/>
+							<figcaption>
+								<h3>Droid Studio</h3>
+								<p class="markup">Java</p>
+								<p>Мобильная версия Android Studuo, но без функции сборки приложений.</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a href="./404">
+						<figure class="project reveal">
+							<img title="FNaF Multiplayer" src="images/fnafm.jpg"/>
+							<figcaption>
+								<h3>FNaF Multiplayer</h3>
+								<p class="markup">Java</p>
+								<p>Мобильный экшен-платформер про выживание и схватку с одержимыми аниматрониками.</p>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="reveal">
+			<div class="content">
+				<h2>Связаться со мной</h2>
+				<p>Возник вопрос, или же хочешь работать со мной? Не стесняйся и пиши мне в любое время! Я отвечю через пару дней.</p>
+					<a href="mailto:mrboomhelp@gmail.com"><button>Перейти к почте</button></a>
+			</div>
+		</section>
 		<footer>
 			<div class="content">
 				<ul class="second">
 					<h4>Ваши данные</h4>
-					<li><a href="terms">Пользовательское соглашение</a></li>
-					<li><a href="privacy">Политика конфиденциальности</a></li>
+					<li><a href="./terms">Пользовательское соглашение</a></li>
+					<li><a href="./privacy">Политика конфиденциальности</a></li>
 				</ul>
 				<ul class="second">
 					<h4>Интересные ссылки</h4>
-					<li><a href="archive">Архив времени</a></li>
+					<li><a href="./archive#projects">Больше проектов</a></li>
+					<li><a href="./archive">Архив данных</a></li>
 				</ul>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
@@ -70,123 +124,6 @@
 				</ul>
 			</div>
 		</footer>
-
-
-
-
-		<!--
-		<section id="about">
-			<div class="content">
-				<h1>About me</h1>
-				<p>14 year old junior front-end developer from Russia. I have been developing websites, applications and <span>2D games</span> since I was 7 years old.</p>
-			</div>
-		</section>
-		<section id="skills">
-			<div class="content">
-				<h1>Learned skills</h1>
-				<h6>C++</h6>
-				<h6>C#</h6>
-				<h6>Python</h6>
-				<h6>Java</h6>
-				<h6>JavaScript</h6>
-				<h6>Pascal</h6>
-				<h6>TypeScript</h6>
-				<h6>Bootstrap</h6>
-				<h6>React</h6>
-				<h6>Vue</h6>
-				<h6>Angular</h6>
-				<h6>Node.js</h6>
-				<h6>MySQL</h6>
-				<h6>GitHub</h6>
-				<h6>PHP</h6>
-				<h6>CSS</h6> √
-				<h6>HTML</h6> √
-				<p>I already know well: <span>HTML, CSS, Java</span></p>
-				<p>I am currently studying: <span>JavaScript, Android, GitHub</span></p>
-			</div>
-		</section>
-		<section id="projects">
-			<div class="content">
-				<h1>Featured projects</h1>
-				<a href="project#fnafm">
-					<div class="project1">
-						<img alt="FNaF Multiplayer" title="FNaF Multiplayer" src="images/fnafm.jpg"/>
-						<span class="space"></span>
-						<span>Java</span>
-						<h4>FNaF Multiplayer</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula tristique placerat. Aliquam vitae nibh dapibus, fermentum orci eu, venenatis urna. Nulla sit amet est sed sapien pulvinar posuere.</p>
-					</div>
-				</a>
-				<a href="https://share.catrob.at/app/project/83272" target="_blank">
-					<div class="project1">
-						<img alt="Bear's Kitchen" title="Bear's Kitchen" src="images/kitchen.jpg"/>
-						<span class="space"></span>
-						<span>Scratch</span>
-						<h4>Bear's Kitchen</h4>
-						<p>Welcome to the Bear's Kitchen. Run around the kitchen to have time to make a pizza. Choose your ingredients for pizza. Play Mini-games revealing the whole history of the kitchen.</p>
-					</div>
-				</a>
-				<a href="project#asm">
-					<div class="project1">
-						<img alt="Android Studio Mobile" title="Android Studio Mobile" src="images/asm.jpg"/>
-						<span class="space"></span>
-						<span>Java</span>
-						<h4>Android Studio Mobile</h4>
-						<p>Android Studio is the official IDE for Android app development. On top of IntelliJ's powerful code editor and even more features that enhance your productivity when building Android apps.</p>
-					</div>
-				</a>
-				
-			<div id="hidden-projects">
-				<a href="https://gamejolt.com/games/fnafnonar/462486" target="_blank">
-					<div class="project">
-						<img alt="FNaF Special Delivery" title="FNaF Special Delivery" src="images/fnafar.jpg"/>
-						<h3>FNaF Special Delivery</h3>
-						<p class="description">Through the game you'l subscribe to Fazbear Entertainment's brand new “Fazbear Funtime Service” and get their favorite animatronics on-demand.</p>
-						<div class="tags">
-							<h6>Survival</h6>
-							<h6>Java</h6>
-							<h6>2020</h6>
-						</div>
-					</div>
-				</a>
-				<a href="https://gamejolt.com/games/sniffsimandroid/504854" target="_blank">
-					<div class="project">
-						<img src="images/sniff.jpg">
-						<h3>FNaF Sniffing Simulator</h3>
-						<p class="description">Are you want hug Bonnie? No!?<br>You Will Die!</p>
-						<div class="tags">
-							<h6>Simulator</h6>
-							<h6>Java</h6>
-							<h6>2020</h6>
-						</div>
-					</div>
-				</a>
-				<a href="https://share.catrob.at/app/project/93902" target="_blank">
-					<div class="project">
-						<img src="https://share.catrob.at/resources/screenshots/screen_93902.png?t=1598101145&v=3.20.33"">
-						<h3>FNaF 4 Pixel Remake</h3>
-						<p class="description">Play as crying child in this uhm... 2d game.<br>These pocket code games so laggy.</p>
-						<div class="tags">
-							<h6>Simulator</h6>
-							<h6>Scratch</h6>
-							<h6>2019</h6>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div id="load-more">
-				<h2>Wanna to see more?</h2>
-				<button onclick="loadMore();">Load more</button>
-			</div>
-			</div>
-		</section>
-		<main id="contacto">
-			<div class="content">
-				<h1>Contact me</h1>
-				<p>Do you have any questions or want to work with me? You can contact me by email.</p>
-				<a href="mailto:mrboomhelp@gmail.com"><button>Send email</button></a>
-			</div>
-		</main>-->
-		<script src="scripts.js"></script>
+		<script src="./scripts/main.js"></script>
 	</body>
 </html>
