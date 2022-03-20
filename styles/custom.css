@@ -1,1 +1,128 @@
-
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+.header-scrolled {
+	box-shadow: 0px 0px 5px rgba(126, 126, 126, 0.1);
+    background: rgba(16, 0, 23, 0.95);
+}
+header h2 {
+    float: left;
+    line-height: 64px;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #D05EFC;
+}
+header ul {
+	float: right;
+}
+header li {
+	float: left;
+}
+header li a {
+    margin-left: 25px;
+    float: left;
+    line-height: 64px;
+    text-align: center;
+	font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+#burger {
+    display: none;
+}
+.column {
+    max-width: 500px;
+}
+main .content {
+	transition: all 0.75s ease !important;
+}
+main p {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+section p {
+	margin: 10px 0 10px 0;
+	line-height: 1.5;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2vw;
+}
+.project {
+	margin-top: 25px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	background: #140A23;
+}
+.project img {
+	width: 100%;
+}
+.project figcaption {
+	padding: 12px 20px 20px 12px;
+}
+.project .markup {
+	margin-top: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #D05EFC;
+}
+.project h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+.project p {
+	margin: 3px 0;
+	overflow: hidden;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+     line-clamp: 2; 
+	-webkit-box-orient: vertical;
+	line-height: 1.5;
+	color: #eaeaea;
+}
+#contact p {
+	margin-bottom: 25px;
+}
+footer .second {
+	float: right;
+	margin-left: 50px;
+}
+footer ul li {
+	margin: 6px 0;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer #follow li {
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+footer #follow li img {
+	width: 30px;
+	height: 30px;
+	object-fit: scale-down;
+	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(100%) contrast(103%);
+	transition: 0.2s;
+}
+footer #follow li img:hover {
+	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(125%) contrast(103%);
+}
+.reveal{
+	transform: translateY(75px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+.active{
+	transform: translateY(0px);
+	opacity: 1;
+}

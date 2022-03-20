@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+	background: #11071F;
+	scrollbar-color: rgba(126, 126, 126, 0.5) #0d001a;
+	scroll-behavior: smooth;
+}
+header {
+	width: 100%;
+	margin-left: -15px;
+	padding: 0 15px;
+    position: fixed;
+	top: 0;
+	z-index: 999;
+	transition: all 0.65s ease !important;
+}
+main {
+	padding: 15% 0 12% 0;
+}
+section {
+	padding: 5vh 0;
+}
+footer {
+	margin-top: 25px;
+	padding: 25px 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+h1, h2, h3, h4, h5, h6, a, p, li, button {
+	font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+	color: #FFFFFF;
+	-webkit-tap-highlight-color: transparent;
+}
+a {
+	color: #f2e6ff;
+}
+h1 {
+	font-family: 'Roboto', sans-serif;
+}
+h2 {
+	color: #ffe6ff;
+}
+p {
+	font-family: 'Ubuntu', sans-serif;
+	color: #f2f2f2;
+}
+a:hover {
+	color: #FFFFFF;
+}
+button {
+	min-width: 120px;
+    padding: 10px 25px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 2px;
+    border-color: #D05EFC;
+    font-size: 16px;
+	color: #D05EFC;
+	background: none;
+	cursor: pointer;
+	transition: 0.1s;
+}
+button:hover {
+	color: #000000;
+	background: #D05EFC;
+	transform: scale(0.95);
+}
+::selection {
+	color: #f2e6ff;
+	background: rgba(102, 0, 204, 0.5);
+}
