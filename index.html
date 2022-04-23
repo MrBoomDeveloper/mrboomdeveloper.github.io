@@ -3,8 +3,6 @@
 	<head>
 		<!--Meta data-->
 		<title>MrBoomDev</title>
-		<meta name="description" content="Привет! Я 14-летний джуниор фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
-		<meta name="author" content="MrBoomDev" />
 		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
 		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -12,6 +10,7 @@
 		<link rel="manifest" href="./site.webmanifest">
 		
 		<!--GoogleBot-->
+			<meta name="description" content="Привет! Я 14-летний джуниор фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
 		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Мистер, Мр, Бум, Боом, Мистр, МрБум, МистерБум" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 		
@@ -48,79 +47,110 @@
 			</div>
 		</header>
 		<main>
-			<div class="content">
-				<div class="column reveal">
-					<h1>Привет!</h1>
-					<p>Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет.</p>
-					<a href="#projects"><button>Взглянуть на проекты</button></a>
-				</div>
+			<div class="content reveal">
+				<h1>Привет, я MrBoomDev!</h1>
+				<p>Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет.</p>
+				<a href="#projects"><button>Взглянуть на проекты</button></a>
 			</div>
 		</main>
-		<section id="about" class="reveal">
+		<section id="about">
 			<div class="content">
-				<h2>Обо мне</h2>
-				<p>Моё имя Денис и я разработчик программного обеспечения, веб-сайтов и приложений для Android. Я без ума от кофе. Я разрабатываю приложения для развлечения, а некоторые из моих других увлечений — ведение блога, YouTube и чтение книг. Я разработал множество программ и игр на различных яп. Программировать же я начал в возрасте 9 лет, когда меня увлекали мобильные игры.</p>
-			</div>
-		</section>
-		<section class="reveal">
-			<div class="content">
-				<h2>Мои навыки</h2>
-				<p>Языки: Java, JS, CSS, HTML.
-				<br>Библиотеки: Android, Firebase
-				<br>Направления: Дизайн, Фронтенд</p>
-			</div>
-		</section>
-		<section id="projects">
-			<div class="content">
-				<h2 class="reveal">Мои проекты</h2>
-				<div class="grid">
-					<a href="./404">
-						<figure class="project reveal">
-							<img title="Droid Studio" src="images/droid_studio.jpg"/>
-							<figcaption>
-								<h3>Droid Studio</h3>
-								<p class="markup">Java</p>
-								<p>Мобильная версия Android Studuo, но без функции сборки приложений.</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a href="./404">
-						<figure class="project reveal">
-							<img title="FNaF Multiplayer" src="images/fnafm.jpg"/>
-							<figcaption>
-								<h3>FNaF Multiplayer</h3>
-								<p class="markup">Java</p>
-								<p>Мобильный экшен-платформер про выживание и схватку с одержимыми аниматрониками.</p>
-							</figcaption>
-						</figure>
-					</a>
+				<div class="block reveal">
+					<div class="info"><h2>Обо мне</h2></div>
+					<div class="contento">
+						<p>Моё имя Денис и я разработчик программного обеспечения, веб-сайтов и приложений для Android. Я без ума от кофе. Я разрабатываю приложения для развлечения, а некоторые из моих других увлечений — ведение блога, YouTube и чтение книг. Я разработал множество программ и игр на различных яп. Программировать же я начал в возрасте 9 лет, когда меня привлекали мобильные игры.</p>
+					</div>
+				</div>
+				<div class="block reveal">
+					<div class="info"><h2>Мои навыки</h2></div>
+					<div id="skills" class="contento">
+						<p class="reveal">Языки</p>
+						<div class="reveal">
+						<h6 class="tag">Java</h6>
+						<h6 class="tag">JavaScript</h6>
+						<h6 class="tag">CSS</h6>
+						<h6 class="tag">HTML</h6>
+						<h6 class="tag">Pascal</h6>
+						</div>
+						<p class="reveal">Программы</p>
+						<div class="reveal">
+						<h6 class="tag">Android Studio</h6>
+						<h6 class="tag">Visual Studio Code</h6>
+						<h6 class="tag">Sketchware Pro</h6>
+						<h6 class="tag">PixelLab</h6>
+						</div>
+						<p class="reveal">Направления</p>
+						<div class="reveal">
+						<h6 class="tag">Дизайн</h6>
+						<h6 class="tag">Геймдев</h6>
+						<h6 class="tag">Фронтенд</h6>
+						<h6 id="projects" class="tag">Программное обеспечение</h6>
+						</div>
+					</div>
+				</div>
+				<div class="block reveal">
+					<div class="info"><h2>Мои проекты</h2></div>
+					<div class="contento">
+						<div class="grid">
+							<a href="./studio">
+								<figure class="project reveal">
+									<img title="Droid Studio" src="images/droid_studio.jpg"/>
+									<figcaption>
+										<h3>Droid Studio</h3>
+										<p class="markup">Java, Android Studio, В разработке</p>
+										<p>Мобильная версия Android Studio, но без функции сборки приложений.</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="./fnafm">
+								<figure class="project reveal">
+									<img title="FNaF Multiplayer" src="images/fnafm.jpg"/>
+									<figcaption>
+										<h3>FNaF Multiplayer</h3>
+										<p class="markup">Java, Android Studio, В разработке</p>
+										<p>Мобильный экшен-платформер про выживание и схватку одержимымых аниматроников.</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="./tea">
+								<figure class="project reveal">
+									<img title="Это морс" src="images/thats_a_tea.jpg"/>
+									<figcaption>
+										<h3>Это «Морс»</h3>
+										<p class="markup">C#, Unity3D, Отложено</p>
+										<p>Похоже, на улицах страны наступил постапокалипсис, но Шеф Морс всем поможет!</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="contact" class="reveal">
 			<div class="content">
 				<h2>Связаться со мной</h2>
-				<p>Возник вопрос, или же хочешь работать со мной? Не стесняйся и пиши мне в любое время! Я отвечю через пару дней.</p>
-					<a href="mailto:mrboomhelp@gmail.com"><button>Перейти к почте</button></a>
+				<p>Возник вопрос, или хочешь работать со мной? Пиши на эту почту и я отвечю в течение недели.</p>
+				<a href="mailto:mrboomdeveloper+hlm7cjfwxpmqxajeqhsg@boards.trello.com"><button>Перейти к почте</button></a>
 			</div>
 		</section>
 		<footer>
 			<div class="content">
 				<ul class="second">
 					<h4>Ваши данные</h4>
-					<li><a href="./terms">Пользовательское соглашение</a></li>
-					<li><a href="./privacy">Политика конфиденциальности</a></li>
+					<li><a href="./terms#agreement">Пользовательское соглашение</a></li>
+					<li><a href="./terms#privacy">Политика конфиденциальности</a></li>
 				</ul>
 				<ul class="second">
 					<h4>Интересные ссылки</h4>
-					<li><a href="./archive#projects">Больше проектов</a></li>
+					<li><a href="./resources">Ресурсы и брендинг</a></li>
 					<li><a href="./archive">Архив данных</a></li>
 				</ul>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
-				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+					<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+					<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
