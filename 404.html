@@ -3,10 +3,10 @@
 	<head>
 		<!--Meta data-->
 		<title>404 - Страница не найдена</title>
-		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
-		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+		<link rel="shortcut icon" type="image/x-icon" href="https://mrboomdeveloper.github.io/favicon.ico?">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://mrboomdeveloper.github.io/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://mrboomdeveloper.github.io/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://mrboomdeveloper.github.io/images/favicon-16x16.png">
 		<link rel="manifest" href="./site.webmanifest">
 		
 		<!--GoogleBot-->
@@ -22,15 +22,15 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./styles/default.css" />
-		<link rel="stylesheet" href="./styles/custom.css" />
-		<link rel="stylesheet" href="./styles/mobile.css" />
+		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/default.css" />
+		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/custom.css" />
+		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/mobile.css" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
 	<body onload="loaded();">
 		<header class="reveal">
 			<div class="content">
-				<a href="./"><h2>MrBoomDev</h2></a>
+				<a href="https://mrboomdeveloper.github.io"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -38,9 +38,9 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
+						<li><a href="https://mrboomdeveloper.github.io/#about" onclick="menuClose();">Обо мне</a></li>
+						<li><a href="https://mrboomdeveloper.github.io/#projects" onclick="menuClose();">Мои проекты</a></li>
+						<li><a href="https://mrboomdeveloper.github.io/#contact" onclick="menuClose();">Написать мне</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -50,7 +50,7 @@
 				<div class="column reveal">
 					<h1>404 - Страница не найдена</h1>
 					<p>Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки.</p>
-					<a href="./"><button>Перейти на главную</button></a>
+					<a href="https://mrboomdeveloper.github.io"><button>Перейти на главную</button></a>
 				</div>
 			</div>
 		</main>
@@ -58,13 +58,13 @@
 			<div class="content">
 				<ul class="second">
 					<h4>Ваши данные</h4>
-					<li><a href="./terms">Пользовательское соглашение</a></li>
-					<li><a href="./privacy">Политика конфиденциальности</a></li>
+					<li><a href="https://mrboomdeveloper.github.io/terms#agreement">Пользовательское соглашение</a></li>
+					<li><a href="https://mrboomdeveloper.github.io/terms#privacy">Политика конфиденциальности</a></li>
 				</ul>
 				<ul class="second">
-					<h4>Интересные ссылки</h4>
-					<li><a href="./archive#projects">Больше проектов</a></li>
-					<li><a href="./archive">Архив данных</a></li>
+					<h4>Ресурсы и брендинг</h4>
+					<li><a href="https://mrboomdeveloper.github.io/resources">Больше проектов</a></li>
+					<li><a href="https://mrboomdeveloper.github.io/archive">Архив данных</a></li>
 				</ul>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
@@ -74,6 +74,18 @@
 				</ul>
 			</div>
 		</footer>
-		<script src="./scripts/main.js"></script>
+		<script src="https://mrboomdeveloper.github.io/scripts/main.js"></script>
+		<script>
+			switch (window.location.href.split("/").pop()) {
+				case "404.html":
+					history.pushState(null, null, "project.html");
+					break;
+				case "studio":
+					alert("droidstudio");
+					break;
+				case "fnafm":
+					alert("fnafm");
+			}
+		</script>
 	</body>
 </html>
