@@ -10,7 +10,7 @@
 		<link rel="manifest" href="./site.webmanifest">
 		
 		<!--GoogleBot-->
-			<meta name="description" content="Пользуясь какими-либо моими продуктами, вы соглашаетесь с текущим пользовательским соглашением." />
+		<meta name="description" content="Пользуясь какими-либо моими продуктами, вы соглашаетесь с текущим пользовательским соглашением." />
 		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Мистер, Мр, Бум, Боом, Мистр, МрБум, МистерБум" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 		
@@ -26,27 +26,27 @@
 		<link rel="stylesheet" href="./styles/default.css" />
 		<link rel="stylesheet" href="./styles/custom.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
+		<script type="text/javascript" src="./scripts/main.js"></script>
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
-	<body id="policies" onload="loaded();">
-		<header class="reveal">
+	<body onload="loaded();">
+		<img id="scrollFixer" src="./images/blank.png" />
+		<header>
 			<div class="content">
 				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
-					</ul>
-				</nav>
+				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
-		<main></main>
+		<main> 
+			<div class="content reveal">
+				<h1>Ваши данные</h1>
+				<p>На этой сверхдлинной страничке расписаны все правила моих сервисов и ваши права как пользователя.</p>
+				<a href="#REPLACE_ME"><button>Перейти к прочтению</button></a>
+			</div>
+		</main>
 		<section id="agreement" class="reveal">
 			<div class="content">
 				<h2>Пользовательское соглашение</h2>
@@ -98,24 +98,14 @@
 		</section>
 		<footer>
 			<div class="content">
-				<ul class="second">
-					<h4>Ваши данные</h4>
-					<li><a href="./terms#agreement">Пользовательское соглашение</a></li>
-					<li><a href="./terms#privacy">Политика конфиденциальности</a></li>
-				</ul>
-				<ul class="second">
-					<h4>Интересные ссылки</h4>
-					<li><a href="./resources">Ресурсы и брендинг</a></li>
-					<li><a href="./archive">Архив данных</a></li>
-				</ul>
+				<div id="footer-links"></div>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
-				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+					<li><a href="https://youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+					<li><a href="https://discord.gg/DQnUrr497R" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="./scripts/main.js"></script>
 	</body>
 </html>

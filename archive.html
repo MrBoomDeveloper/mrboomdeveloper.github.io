@@ -26,24 +26,18 @@
 		<link rel="stylesheet" href="./styles/default.css" />
 		<link rel="stylesheet" href="./styles/custom.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
+		<script src="./scripts/main.js"></script>
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
 	<body onload="loaded();">
-		<header class="reveal">
+		<img id="scrollFixer" src="./images/blank.png" />
+		<header>
 			<div class="content">
 				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
-					</ul>
-				</nav>
+				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
 		<main>
@@ -59,19 +53,9 @@
 					<div class="info"><h2>Старые игры</h2></div>
 					<div class="contento">
 						<div class="grid">
-							<a href="https://share.catrob.at/app/project/83272" target="_blank">
-								<figure class="project reveal">
-									<img title="Jollibee's Multiplayer" src="images/kitchen.jpg"/>
-									<figcaption>
-										<h3>Bear's Kitchen</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://share.catrob.at/app/project/83272</p>
-									</figcaption>
-								</figure>
-							</a>
 							<a href="https://share.catrob.at/app/project/77618" target="_blank">
 								<figure class="project reveal">
-									<img title="Granny 2D" src="images/granny2d.jpg"/>
+									<img title="Granny 2D" src="images/not_found.jpg"/>
 									<figcaption>
 										<h3>Granny 2D</h3>
 										<p class="markup">Pocket Code</p>
@@ -81,7 +65,7 @@
 							</a>
 							<a href="https://share.catrob.at/app/project/57826" target="_blank">
 								<figure class="project reveal">
-									<img title="FNaF 7" src="images/fnaf7.jpg"/>
+									<img title="FNaF 7" src="images/not_found.jpg"/>
 									<figcaption>
 										<h3>Five Nights at Freddy's 7</h3>
 										<p class="markup">Pocket Code</p>
@@ -118,7 +102,7 @@
 							</a>
 							<a href="https://share.catrob.at/app/project/93902" target="_blank">
 								<figure class="project reveal">
-									<img title="FNaF 4: 8 Bit" src="images/fnaf4.jpg"/>
+									<img title="FNaF 4: 8 Bit" src="images/not_found.jpg"/>
 									<figcaption>
 										<h3>Five Nights at Freddy's 4: 8 Bit</h3>
 										<p class="markup">Pocket Code</p>
@@ -128,7 +112,7 @@
 							</a>
 							<a href="https://share.catrob.at/app/project/79340" target="_blank">
 								<figure class="project reveal">
-									<img title="FNaF 6 порт" src="images/fnaf6.jpg"/>
+									<img title="FNaF 6 порт" src="images/not_found.jpg"/>
 									<figcaption>
 										<h3>Five Nights at Freddy's 6 порт</h3>
 										<p class="markup">Pocket Code</p>
@@ -138,7 +122,7 @@
 							</a>
 							<a href="https://share.catrob.at/app/project/77875" target="_blank">
 								<figure class="project reveal">
-									<img title="FNaF 1 Remake" src="images/fnaf1.jpg"/>
+									<img title="FNaF 1 Remake" src="images/not_found.jpg"/>
 									<figcaption>
 										<h3>Five Nights at Freddy's Remake</h3>
 										<p class="markup">Pocket Code</p>
@@ -227,24 +211,14 @@
 		</section>
 		<footer>
 			<div class="content">
-				<ul class="second">
-					<h4>Ваши данные</h4>
-					<li><a href="./terms#agreement">Пользовательское соглашение</a></li>
-					<li><a href="./terms#privacy">Политика конфиденциальности</a></li>
-				</ul>
-				<ul class="second">
-					<h4>Интересные ссылки</h4>
-					<li><a href="./resources">Ресурсы и брендинг</a></li>
-					<li><a href="./archive">Архив данных</a></li>
-				</ul>
+				<div id="footer-links"></div>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
 					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-					<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-					<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+					<li><a href="https://youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+					<li><a href="https://discord.gg/DQnUrr497R" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="./scripts/main.js"></script>
 	</body>
 </html>

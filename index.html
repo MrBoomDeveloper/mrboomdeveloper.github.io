@@ -27,28 +27,22 @@
 		<link rel="stylesheet" href="./styles/default.css" />
 		<link rel="stylesheet" href="./styles/custom.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
-		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<script type="text/javascript" src="./scripts/main.js"></script>
+		<script type="text/javascript" src="./scripts/project.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	</head>
-	<body onload="loaded();">
+	<body onload="loaded(); load('home');">
 		<img id="scrollFixer" src="./images/blank.png" />
-		<header class="reveal">
+		<header>
 			<div class="content">
 				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
-					</ul>
-				</nav>
+				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
-		<main>
+		<main> 
 			<div class="content reveal">
 				<h1>Привет, я MrBoomDev!</h1>
 				<p>Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет.</p>
@@ -59,8 +53,10 @@
 			<div class="content">
 				<div class="block reveal">
 					<div class="info"><h2>Обо мне</h2></div>
-					<div class="contento">
-						<p>Мое имя Денис и я разработчик программного обеспечения, веб-сайтов и приложений для Android. Я без ума от кофе. Я разрабатываю приложения для развлечения, а некоторые из моих других увлечений — ведение блога, YouTube и чтение книг. Я разработал множество программ и игр на различных яп. Программировать же я начал в возрасте 9 лет, когда меня привлекали мобильные игры.</p>
+					<div id="story" class="contento">
+						<p>Мое имя Денис и я разработчик программного обеспечения, веб-сайтов и приложений для Android. Я без ума от кофе.</p>
+						<p>Я разрабатываю приложения для развлечения, а некоторые из моих других увлечений — ведение блога, YouTube и чтение книг.</p>
+						<p>Я разработал множество программ и игр на различных яп. Программировать же я начал в возрасте 9 лет, когда меня привлекали мобильные игры.</p>
 					</div>
 				</div>
 				<lottie-player class="section-lottie" src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
@@ -96,38 +92,7 @@
 				<div class="block reveal">
 					<div class="info"><h2>Мои проекты</h2></div>
 					<div class="contento">
-						<div class="grid">
-							<a href="./studio">
-								<figure class="project reveal">
-									<img title="Droid Studio" src="images/droid_studio.jpg"/>
-									<figcaption>
-										<h3>Droid Studio</h3>
-										<p class="markup">Java, В разработке</p>
-										<p>Мобильная версия Android Studio, но без функции сборки приложений.</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="./fnafm">
-								<figure class="project reveal">
-									<img title="FNaF Multiplayer" src="images/fnafm.jpg"/>
-									<figcaption>
-										<h3>FNaF Multiplayer</h3>
-										<p class="markup">Java, В разработке</p>
-										<p>Мобильный экшен-платформер про выживание и схватку одержимымых аниматроников.</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://share.catrob.at/app/project/83272" target="_blank">
-								<figure class="project reveal">
-									<img title="Jollibee's Multiplayer" src="images/kitchen.jpg"/>
-									<figcaption>
-										<h3>Bear's Kitchen</h3>
-										<p class="markup">Scratch, Завершено</p>
-										<p>Желаете ли вы устроиться в нашей пиццерии? У нас бесплатная пицца для сотрудников!</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
+						<div id="fillProjects" class="grid"></div>
 					</div>
 				</div>
 			</div>
@@ -142,18 +107,7 @@
 		<lottie-player src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 		<footer>
 			<div class="content">
-				<ul class="second">
-					<h4>Ваши данные</h4>
-					<li><a href="./terms#agreement">Пользовательское соглашение</a></li>
-					<li><a href="./terms#privacy">Политика конфиденциальности</a></li>
-					<li><a href="mailto:mrboomdeveloper+hlm7cjfwxpmqxajeqhsg@boards.trello.com">Связаться со мной</a></li>
-				</ul>
-				<ul class="second">
-					<h4>Интересные ссылки</h4>
-					<li><a href="./resources">Ресурсы и брендинг</a></li>
-					<li><a href="./archive">Архив данных</a></li>
-					<li><a target="_blank" href="https://music.youtube.com/playlist?list=PLSWY81108wBhKajj1EUuBr89ydg-DUjPy">Мой плейлист</a></li>
-				</ul>
+				<div id="footer-links"></div>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
 					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
@@ -162,6 +116,5 @@
 				</ul>
 			</div>
 		</footer>
-		<script src="./scripts/main.js"></script>
 	</body>
 </html>

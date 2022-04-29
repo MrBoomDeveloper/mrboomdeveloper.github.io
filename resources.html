@@ -26,82 +26,65 @@
 		<link rel="stylesheet" href="./styles/default.css" />
 		<link rel="stylesheet" href="./styles/custom.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
+		<script type="text/javascript" src="./scripts/main.js"></script>
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
 	<body onload="loaded();">
-		<header class="reveal">
+		<img id="scrollFixer" src="./images/blank.png" />
+		<header>
 			<div class="content">
 				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="./#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="./#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="./#contact" onclick="menuClose();">Написать мне</a></li>
-					</ul>
-				</nav>
+				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
 		<main>
 			<div class="content reveal">
 				<h1>Ресурсы и Брендинг</h1>
 				<p>На этом разделе сайта вы можете скачать брендовые картиночки и цветовую палитру, которую я использую в своих работах.</p>
-				<a href="#colors"><button>Перейти к ресурсам</button></a>
+				<a href="#resources"><button>Перейти к ресурсам</button></a>
 			</div>
 		</main>
-		<span id="colors" />
-		<section class="reveal">
+		<section id="about">
 			<div class="content">
-				<h2>Цветовая палитра</h2>
-				<div class="colors grid">
-					<div class="color-1"><p>#6600CC</p></div>
-					<div class="color-2"><p>#9900FF</p></div>
-					<div class="color-3"><p>#D05EFC</p></div>
-					<div class="color-5"><p>#FFE6FF</p></div>
-					<div class="color-4"><p>#F2E6FF</p></div>
-					<div class="color-6"><p>#140A23</p></div>
+				<div class="block reveal">
+					<div class="info"><h2>Цветовая палитра</h2></div>
+					<div class="contento">
+						<div class="colors grid">
+							<div class="color-1"><p>#6600CC</p></div>
+							<div class="color-2"><p>#9900FF</p></div>
+							<div class="color-3"><p>#D05EFC</p></div>
+							<div class="color-5"><p>#FFE6FF</p></div>
+							<div class="color-4"><p>#F2E6FF</p></div>
+							<div class="color-6"><p>#140A23</p></div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="reveal">
-			<div class="content">
-				<h2>Брендинг</h2>
-				<div class="grid">
-					<a href="./android-chrome-512x512.png">
-						<figure class="project reveal">
-							<img title="Аватарка" src="./android-chrome-512x512.png"/>
-							<figcaption>
+				<div id="resources" class="block reveal">
+					<div class="info"><h2>Брендинг</h2></div>
+					<div class="contento">
+						<div class="grid">
+							<a href="images/avatar.jpg"><figure class="project reveal">
+								<img src="images/avatar.jpg"/><figcaption>
 								<h3>Аватарка</h3>
-							</figcaption>
-						</figure>
-					</a>
+							</figcaption></figure></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<footer>
 			<div class="content">
-				<ul class="second">
-					<h4>Ваши данные</h4>
-					<li><a href="./terms#agreement">Пользовательское соглашение</a></li>
-					<li><a href="./terms#privacy">Политика конфиденциальности</a></li>
-				</ul>
-				<ul class="second">
-					<h4>Интересные ссылки</h4>
-					<li><a href="./resources">Ресурсы и брендинг</a></li>
-					<li><a href="./archive">Архив данных</a></li>
-				</ul>
+				<div id="footer-links"></div>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
 					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-					<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-					<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+					<li><a href="https://youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+					<li><a href="https://discord.gg/DQnUrr497R" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="./scripts/main.js"></script>
 	</body>
 </html>

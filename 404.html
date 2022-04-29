@@ -10,7 +10,7 @@
 		<link rel="manifest" href="./site.webmanifest">
 		
 		<!--GoogleBot-->
-			<meta name="description" content="Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки." />
+		<meta name="description" content="Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки." />
 		<meta name="robots" content="noindex">
 		
 		<!--Makes site beautiful-->
@@ -25,67 +25,37 @@
 		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/default.css" />
 		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/custom.css" />
 		<link rel="stylesheet" href="https://mrboomdeveloper.github.io/styles/mobile.css" />
+		<script src="https://mrboomdeveloper.github.io/scripts/main.js"></script>
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	</head>
 	<body onload="loaded();">
-		<header class="reveal">
+		<img id="scrollFixer" src="./images/blank.png" />
+		<header>
 			<div class="content">
-				<a href="https://mrboomdeveloper.github.io"><h2>MrBoomDev</h2></a>
+				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
 				</div>
-				<nav>
-					<ul>
-						<li><a href="https://mrboomdeveloper.github.io/#about" onclick="menuClose();">Обо мне</a></li>
-						<li><a href="https://mrboomdeveloper.github.io/#projects" onclick="menuClose();">Мои проекты</a></li>
-						<li><a href="https://mrboomdeveloper.github.io/#contact" onclick="menuClose();">Написать мне</a></li>
-					</ul>
-				</nav>
+				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
 		<main>
 			<div class="content">
-				<div class="column reveal">
-					<h1>404 - Страница не найдена</h1>
-					<p>Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки.</p>
-					<a href="https://mrboomdeveloper.github.io"><button>Перейти на главную</button></a>
-				</div>
+				<h1>404 - Страница не найдена</h1>
+				<p>Извините, но запрошенный ресурс не найден. Пожалуйста, проверьте целостность ссылки.</p>
+				<a href="https://mrboomdeveloper.github.io"><button>Перейти на главную</button></a>
 			</div>
 		</main>
 		<footer>
 			<div class="content">
-				<ul class="second">
-					<h4>Ваши данные</h4>
-					<li><a href="https://mrboomdeveloper.github.io/terms#agreement">Пользовательское соглашение</a></li>
-					<li><a href="https://mrboomdeveloper.github.io/terms#privacy">Политика конфиденциальности</a></li>
-				</ul>
-				<ul class="second">
-					<h4>Ресурсы и брендинг</h4>
-					<li><a href="https://mrboomdeveloper.github.io/resources">Больше проектов</a></li>
-					<li><a href="https://mrboomdeveloper.github.io/archive">Архив данных</a></li>
-				</ul>
+				<div id="footer-links"></div>
 				<ul id="follow">
 					<h4>Подписывайтесь на меня</h4>
-				<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-				<li><a href="https://www.youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-				<li><a href="https://www.google.com" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
+					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
+					<li><a href="https://youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
+					<li><a href="https://discord.gg/DQnUrr497R" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
 				</ul>
 			</div>
 		</footer>
-		<script src="https://mrboomdeveloper.github.io/scripts/main.js"></script>
-		<script>
-			switch (window.location.href.split("/").pop()) {
-				case "404.html":
-					history.pushState(null, null, "project.html");
-					break;
-				case "studio":
-					alert("droidstudio");
-					break;
-				case "fnafm":
-					alert("fnafm");
-			}
-		</script>
 	</body>
 </html>
