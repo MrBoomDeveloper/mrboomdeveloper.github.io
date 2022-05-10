@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="https://schema.org/Article">
 	<head>
-		<!--Meta data-->
-		<title>MrBoomDev - Архив Данных</title>
-		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
-		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-		<link rel="manifest" href="./site.webmanifest">
-		
-		<!--GoogleBot-->
-		<meta name="description" content="На этом разделе сайта вы сможете увидеть все мои работы, которые мне удалось сохранить." />
-		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Game, Мистер, Мр, Бум, Боом, Мистр, МрБум, МистерБум" />
-		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
-		
 		<!--Makes site beautiful-->
 		<meta charset="utf-8" />
-		<meta name="theme-color" content="#ffffff">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<link rel="stylesheet" href="./styles/default.css" />
 		<link rel="stylesheet" href="./styles/custom.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
-		<script src="./scripts/main.js"></script>
-		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<script type="text/javascript" src="./scripts/main.js"></script>
+		<script type="text/javascript" src="./scripts/project.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		
+		<!--For browsers-->
+		<title>MrBoomDev - Архив Данных</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+		<link rel="manifest" href="./site.webmanifest" />
+		<meta name="theme-color" content="#11071F" />
+		
+		<!--Index bots-->
+		<meta itemprop="name" content="MrBoomDev - Архив Данных" />
+		<meta property="og:title" content="MrBoomDev - Архив Данных" />
+		<meta property="og:site_name" content="MrBoomDev - Архив Данных" />
+		<meta name="description" content="На этом разделе сайта вы сможете увидеть все мои работы, которые удалось сохранить, ну или некоторые обрывки." />
+		<meta itemprop="description" content="На этом разделе сайта вы сможете увидеть все мои работы, которые удалось сохранить, ну или некоторые обрывки." />
+		<meta property="og:description" content="На этом разделе сайта вы сможете увидеть все мои работы, которые удалось сохранить, ну или некоторые обрывки." />
+		<meta itemprop="image" content="./images/mrboom.jpg" />
+		<meta property="og:image" content="./images/mrboom.jpg" />
+		<meta property="og:url" content="https://mrboomdeveloper.github.io" />
+		<meta property="og:type" content="website" />
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Мистер, Мр, Бум, Мистр, МрБум, МистерБум, DroidStudio, Droid Studio" />
+		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		<meta name="robots" content="index, follow" />
 	</head>
-	<body onload="loaded();">
+	<body onload="loaded('archive');">
 		<img id="scrollFixer" src="./images/blank.png" />
-		<header>
+		
+		<header class="reveal">
 			<div class="content">
 				<a href="./"><h2>MrBoomDev</h2></a>
 				<div id="burger" onclick="toggleMenu()">
@@ -40,6 +48,7 @@
 				<nav><ul id="header-links"></ul></nav>
 			</div>
 		</header>
+		
 		<main>
 			<div class="content reveal">
 				<h1>Архив Данных</h1>
@@ -47,178 +56,21 @@
 				<a href="#projects"><button>Взглянуть на работы</button></a>
 			</div>
 		</main>
+		
 		<section id="projects">
-			<div class="content">
-				<div class="block reveal">
-					<div class="info"><h2>Старые игры</h2></div>
-					<div class="contento">
-						<div class="grid">
-							<a href="https://share.catrob.at/app/project/77618" target="_blank">
-								<figure class="project reveal">
-									<img title="Granny 2D" src="images/not_found.jpg"/>
-									<figcaption>
-										<h3>Granny 2D</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://share.catrob.at/app/project/77618</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://share.catrob.at/app/project/57826" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF 7" src="images/not_found.jpg"/>
-									<figcaption>
-										<h3>Five Nights at Freddy's 7</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://share.catrob.at/app/project/57826</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://gamejolt.com/games/sniffsimandroid/504854" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF Sniffing Simulator" src="images/sniff.jpg"/>
-									<figcaption>
-										<h3>FNaF Sniffing Simulator</h3>
-										<p class="markup">Java</p>
-										<p>https://gamejolt.com/games/sniffsimandroid/504854</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="block reveal">
-					<div class="info"><h2>Отменённые игры</h2></div>
-					<div class="contento">
-						<div class="grid">
-							<a href="https://gamejolt.com/games/fnafnonar/462486" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF Non-AR" src="images/fnafar.jpg"/>
-									<figcaption>
-										<h3>FNaF Special Delivery Non-AR</h3>
-										<p class="markup">Java, Firebase</p>
-										<p>https://gamejolt.com/games/fnafnonar/462486</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://share.catrob.at/app/project/93902" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF 4: 8 Bit" src="images/not_found.jpg"/>
-									<figcaption>
-										<h3>Five Nights at Freddy's 4: 8 Bit</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://share.catrob.at/app/project/93902</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://share.catrob.at/app/project/79340" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF 6 порт" src="images/not_found.jpg"/>
-									<figcaption>
-										<h3>Five Nights at Freddy's 6 порт</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://share.catrob.at/app/project/79340</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://share.catrob.at/app/project/77875" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF 1 Remake" src="images/not_found.jpg"/>
-									<figcaption>
-										<h3>Five Nights at Freddy's Remake</h3>
-										<p class="markup">Pocket Code</p>
-										<p>hhttps://share.catrob.at/app/project/77875</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="block reveal">
-					<div class="info"><h2>Потерянные игры</h2></div>
-					<div class="contento">
-						<div class="grid">
-							<a href="https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w" target="_blank">
-								<figure class="project reveal">
-									<img title="Jollibee's Multiplayer" src="images/jolli.jpg"/>
-									<figcaption>
-										<h3>Jollibee's Multiplayer</h3>
-										<p class="markup">Java, Firebase</p>
-										<p>https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://youtube.com/watch?v=FSXiqyCmsj0" target="_blank">
-								<figure class="project reveal">
-									<img title="Scott in Space мобильный порт" src="images/space.jpg"/>
-									<figcaption>
-										<h3>Scott in Space порт</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://youtube.com/watch?v=FSXiqyCmsj0</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://www.instagram.com/p/BzKj3P6BX16" target="_blank">
-								<figure class="project reveal">
-									<img title="FNaF Help Wanted порт" src="images/helpwanted.jpg"/>
-									<figcaption>
-										<h3>FNaF Help Wanted порт</h3>
-										<p class="markup">Pocket Code</p>
-										<p>https://www.instagram.com/p/BzKj3P6BX16</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="block reveal">
-					<div class="info"><h2>Старые сайты</h2></div>
-					<div class="contento">
-						<div class="grid">
-							<a href="http://mrboom1.simplesite.com/442672397" target="_blank">
-								<figure class="project reveal">
-									<img title="Мой третий сайт" src="images/simplesite.jpg"/>
-									<figcaption>
-										<h3>Мой третий сайт</h3>
-										<p class="markup">SimpleSite</p>
-										<p>http://mrboom1.simplesite.com/442672397</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://mrboom1.gamejolt.io/ucnmeme" target="_blank">
-								<figure class="project reveal">
-									<img title="Сайт для Ultimate Custom Night Meme Edition" src="images/site2.jpg"/>
-									<figcaption>
-										<h3>Сайт для UCN Meme Edition</h3>
-										<p class="markup">HTML, CSS</p>
-										<p>https://mrboom1.gamejolt.io/ucnmeme</p>
-									</figcaption>
-								</figure>
-							</a>
-							<a href="https://mrboom1.gamejolt.io" target="_blank">
-								<figure class="project reveal">
-									<img title="Мой самый первый сайт" src="images/site1.jpg"/>
-									<figcaption>
-										<h3>Мой самый первый сайт</h3>
-										<p class="markup">HTML, CSS</p>
-										<p>https://mrboom1.gamejolt.io</p>
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="fillProjects" class="content"></div>
 		</section>
+		
 		<footer>
-			<div class="content">
-				<div id="footer-links"></div>
-				<ul id="follow">
-					<h4>Подписывайтесь на меня</h4>
-					<li><a href="https://vk.com/mrboomdeveloper" target="_blank"><img alt="VK" title="VK" src="images/vk.png"/></a></li>
-					<li><a href="https://youtube.com/channel/UC6rsEtGQjYjzbmH-i7cSrWw" target="_blank"><img alt="YouTube" title="YouTube" src="images/youtube.png"/></a></li>
-					<li><a href="https://discord.gg/DQnUrr497R" target="_blank"><img alt="Discord" title="Discord" src="images/discord.png"/></a></li>
-				</ul>
-			</div>
+			<div id="footer-links" class="content"></div>
 		</footer>
+		
+		<noscript>
+			<div class="warning">
+				<h4>Включите JavaScript</h4>
+				<p>Извините, но для полноценной работы сайта необходимо включить данную функцию. Сделать это можно в настройках вашего браузера</p>
+			</div>
+		</noscript>
+		
 	</body>
 </html>
