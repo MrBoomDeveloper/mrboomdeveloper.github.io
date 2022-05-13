@@ -90,6 +90,17 @@ button:hover {
 	transform: scale(0.95);
 	transition: all 0.2s, transform 0.1s;
 }
+.tags h6 {
+	display: inline-block;
+	margin: 2px 5px 8px 0;
+	padding: 10px 15px;
+	font-size: 0.95em;
+	font-weight: 400;
+	border-radius: 5px;
+	box-shadow: var(--shadow);
+	background: var(--card-active);
+	text-align: center;
+}
 
 /*Layouts*/
 

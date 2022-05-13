@@ -7,14 +7,17 @@
 	float: left;
 }
 
-#skills-block p {
-	margin: 10px 0 12px 0;
+.tags.skills h6 {
+	padding: 1rem 0.5rem;
 }
-#skills p {
-	margin: 10px 0 12px 0;
+.tags h6 img {
+	margin: 0 auto 1rem auto;
+	height: 5rem;
+	padding: 10px;
+	display: block;
 }
-#skills p:first-child {
-	margin: 0 0 12px 0;
+.tags h6.android img {
+	padding: 15px;
 }
 
 #projects {
@@ -61,16 +64,6 @@
 	padding-top: 0;
 }
 
-.tags h6 {
-	display: inline-block;
-	margin: 2px 5px 8px 0;
-	padding: 10px 15px;
-	font-size: 0.95em;
-	font-weight: 400;
-	border-radius: 5px;
-	box-shadow: var(--shadow);
-	background: var(--card-active);
-}
 hr {
 	opacity: 0.15;
 }
