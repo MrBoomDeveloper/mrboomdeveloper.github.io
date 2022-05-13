@@ -15,9 +15,9 @@ const footer_list = [[
 	'<li><a href="mailto:mrboomdeveloper+hlm7cjfwxpmqxajeqhsg@boards.trello.com">Связаться со мной</a></li>'
 ]];
 const social_media = [
-	'<li><a href="https://bit.ly/mrboomdevvk" target="_blank"><img src="images/vk.png"/></a></li>',
-	'<li><a href="https://bit.ly/mrboomdevyt" target="_blank"><img src="images/youtube.png"/></a></li>',
-	'<li><a href="https://bit.ly/mrboomdevds" target="_blank"><img src="images/discord.png"/></a></li>'
+	'<li><a href="https://bit.ly/mrboomdevvk" target="_blank"><img src="images/icons/vk.png"/></a></li>',
+	'<li><a href="https://bit.ly/mrboomdevyt" target="_blank"><img src="images/icons/youtube.png"/></a></li>',
+	'<li><a href="https://bit.ly/mrboomdevds" target="_blank"><img src="images/icons/discord.png"/></a></li>'
 ];
 
 let header;
