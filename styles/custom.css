@@ -105,6 +105,9 @@ lottie-player {
 	top: 12rem;
 	padding-bottom: 6rem;
 }
+#preview .content {
+	width: min(50rem, 95%);
+}
 #preview .about > div h3 {
 	margin-top: .8rem;
 	margin-bottom: .2rem;
@@ -116,6 +119,7 @@ lottie-player {
 }
 #title {
 	font-size: 2em;
+	margin-bottom: .2em;
 }
 #tags {
 	color: var(--primary);
@@ -132,19 +136,17 @@ lottie-player {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	line-height: auto;
 }
 #rating h3 {
 	background-color: #7444bb;
 	font-size: 1.2em;
 	border-radius: .2em;
 	padding: .4em;
+	margin-top: 0 !important;
 }
-#rating h4 {
-	font-size: .9em;
-}
-#rating p {
-	color: #DEDEDE;
-	font-size: .8em;
+#rating h2 {
+	font-size: 1.2em;
 }
 #popup .grid {
 	margin-top: .8rem;
