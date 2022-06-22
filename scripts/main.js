@@ -1,15 +1,30 @@
 var html = "", scroll = 0;
 
 const main = {
-	load: function(page) {
+	load: function() {
 		skills.load();
 		nav.load();
 		footer.load();
-		if(page == "home") {
-			projects.tab("home");
-			projects.tab("archive");
-		}
+		projects.tab("home");
+		projects.tab("archive");
 		reveal();
+		switch(param("page")) {
+			case "project":
+				projects.open(param("id"));
+				break;
+			case "branding":
+				this.popup(1);
+				break;
+			case "archive":
+				this.popup(2);
+				break;
+			case "privacy":
+				this.popup(3);
+				break;
+			default:
+				if(param("page") != undefined) console.error("404 page not found")
+				break;
+		}
 	},
 	popup: function(page) {
 		scroll = window.pageYOffset;

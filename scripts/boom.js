@@ -54,6 +54,10 @@ const cookie = {
 
 function alert(title, description, time) {
 	if(!loaded) return;
+	if(description == undefined) {
+		time = 3000;
+		description = "No description provided";
+	}
 	var message = document.createElement("div");
 	message.innerHTML = `<div class="card small"><div class="about"><h4>${title}</h4><p>${description}</p></div></div>`;
 	element("#messages").appendChild(message);
