@@ -83,14 +83,8 @@
 				<div class="content"></div>
 				
 				<div class="content">
-					<a class="reveal" href="archive">
-						<div id="archive-button" class="card button clickable">
-							<div class="about">
-								<h2>Загляните в архив</h2>
-								<p>Там вы сможете найти все проекты, которые не попали на главную страницу.</p>
-							</div>
-							<span>&#62;</span>
-						</div>
+					<a class="reveal" href="#" onclick="main.popup(2)">
+						<card-button clickable title="Загляните в архив" description="Там вы сможете найти все проекты, которые не попали на главную страницу."></card-button>
 					</a>
 				</div>
 			</section>
@@ -117,38 +111,64 @@
 			<div id="popup" class="reveal">
 				<div class="wrapper">
 					<header>
-						<span class="material-symbols-outlined" onclick="projects.close()">arrow_back</span>
+						<span class="material-symbols-outlined" onclick="main.popdown()">arrow_back</span>
 					</header>
 					
 					<main>
 						<section id="preview">
 							<img id="banner"/>
 							<div class="shadow"></div>
-							<div class="about content">
-								<h1 id="title"></h1>
-								<p id="tags"></p>
-								<hr noshade color="#FFE6FF" size="1" />
-								<p id="description"></p>
-								<div id="rating" class="card small">
-									<h3>5.0</h3>
-									<div class="info">
-										<h4>Минимальная версия Android</h4>
-										<p>Если у вас устройство более старой версии, попробуйте обновить его в настройках системы.</p>
+							<div class="about">
+								<div class="content">
+									<h1 id="title"></h1>
+									<p id="tags"></p>
+									<hr noshade color="#FFE6FF" size="1" />
+									<p id="description"></p>
+									<div id="rating" class="card-small">
+										<h3>5.0</h3>
+										<div class="info">
+											<h4>Минимальная версия Android</h4>
+											<p>Если у вас устройство более старой версии, попробуйте обновить его в настройках системы.</p>
+										</div>
 									</div>
+									<h3>Скриншоты</h3>
+									<div class="grid" id="screenshots"></div>
 								</div>
-								<h3>Скриншоты</h3>
-								<div class="grid" id="screenshots"></div>
 							</div>
 							<div id="actions">
-								<button id="watch" class="neon" onclick="projects.download()">Скачать</button>
-								<button id="trailer" class="neon" onclick="projects.trailer()"><span class="material-symbols-outlined">movie</span></button>
+								<div class="content">
+									<button id="watch" class="neon" onclick="projects.download()">Скачать</button>
+									<button id="trailer" class="neon" onclick="projects.trailer()"><span class="material-symbols-outlined">movie</span></button>
+								</div>
 							</div>
+						</section>
+						
+						<section id="branding">
+							<div class="content">
+								<h2>Цветовая палитра</h2>
+								<div class="grid colors">
+									<card-color code="#D05EFC"></card-color>
+									<card-color code="#FFE6FF"></card-color>
+									<card-color code="#F2E6FF"></card-color>
+									<card-color code="#FAFAFA"></card-color>
+									<card-color code="#1D112F"></card-color>
+									<card-color code="#140A23"></card-color>
+									<card-color code="#11071F"></card-color>
+								</div>
+								<h2>Изображения</h2>
+								<div class="grid">
+									<card-simple onclick="go('./images/icons/mrboom.jpg')" clickable><img src="./images/icons/mrboom.jpg"/></card-simple>
+									<card-simple onclick="go('./images/banners/yt.jpg')" clickable><img src="./images/banners/yt.jpg"/></card-simple>
+								</div>
+							</div>
+						</section>
+						
+						<section id="archive">
+							<div class="content"></div>
 						</section>
 					</main>
 				</div>
 			</div>
-		
-			<div id="messages"></div>
 		</div>
 	</body>
 </html>
