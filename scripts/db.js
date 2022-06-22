@@ -21,8 +21,8 @@ footer.social = [
 ]
 
 footer.links = [
-	{title: "Брендинг", link: "./resources"},
-	{title: "Архив Данных", link: "./archive"},
+	{title: "Брендинг"},
+	{title: "Архив Данных"},
 	{title: "Мой Плейлист", link: "https://bit.ly/mrboomdevplay"},
 ]
 
@@ -32,7 +32,7 @@ projects.all = [
 		description: "Мобильный редактор кода, позволяющий использовать систему контроля версий. В данный момент в стадии замедленной разработки.<br>Во время разработки был упор на мультизадачность. Это значит что в боковом меню одновременно будут показаны все папки и файлы открытого проекта. Сверху кода распологаются кнопки быстрого действия, а под ними открытые в данный момент файлы.",
 		tags: ["Java", "Android", "Отложено", "2022"],
 		screenshots: ["not_found.jpg", "not_found.jpg", "not_found.jpg"],
-		link: "https://nightly.link/MrBoomDeveloper/DroidStudio/workflows/android/master/app-debug.apk.zip"
+		link: "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip"
 	}, { //1
 		name: "FNaF Multiplayer", banner: "not_found.jpg",
 		description: "Мобильный экшен-платформер про выживание и схватку одержимымых аниматроников.",
@@ -90,8 +90,12 @@ projects.cats = {
 		title: "Лучшие проекты", content: [ 0, 1, 2 ]
 	}],
 	archive: [{
-		title: "Старые игры", content: [ 0 ]
+		title: "Старые игры", content: [ 3, 4, 5 ]
 	}, {
-		title: "Старые сайты", content: [ 0 ]
+		title: "Отмененные игры", content: [ 6, 7 ]
+	}, {
+		title: "Потерянные игры", content: [ 8 ]
+	}, {
+		title: "Старые сайты", content: [ 9, 10, 11 ]
 	}]
 }
