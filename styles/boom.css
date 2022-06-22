@@ -76,7 +76,8 @@ h3 {
 p {
 	color: var(--text);
 }
-button.neon {
+
+button[neon] {
 	padding: .8em 2em;
 	border: solid var(--primary) 1px;
 	border-radius: 2px;
@@ -85,20 +86,21 @@ button.neon {
 	background-color: rgba(17, 7, 31, .4);
 	transition: .2s;
 }
-button.neon span {
+button[neon] span {
 	color: var(--primary);
 }
-button.neon:hover:not(:disabled) {
+button[neon]:hover:not(:disabled) {
 	color: black;
 	background-color: var(--primary);
 	transform: scale(.95);
 }
-button.neon:hover:not(:disabled) span {
+button[neon]:hover:not(:disabled) span {
 	color: black;
 }
-button.neon:disabled {
+button[neon]:disabled {
 	opacity: .75;
 }
+
 .tags {
 	display: flex;
 	flex-wrap: wrap;
@@ -205,12 +207,12 @@ card-color {
 	box-shadow: var(--shadow);
 	border-radius: .3rem;
 	width: 100%;
-	padding: 1rem;
+	padding: .6rem;
 }
 card-color p {
 	background: rgba(0, 0, 0, .25);
 	border-radius: .4em;
-	margin-top: .6em;
+	margin-top: 1.2em;
 	padding: .4em;
 	float: left;
 }
@@ -365,6 +367,9 @@ header h2 {
 	max-height: 0;
 	transform: translateX(150%);
 	transition: 1s, opacity .2s, transform .3s, margin .4s;
+}
+#messages > div p {
+	margin-top: .3em;
 }
 #messages > div.active {
 	max-height: 999px;
