@@ -45,7 +45,7 @@ header  > .content {
 
 footer {
 	--panel: rgba(0, 0, 0, .2);
-	padding: 2rem 1rem 3rem 1rem;
+	padding: 2.4rem 1rem 3rem 1rem;
 }
 footer .content {
 	display: flex;
@@ -67,9 +67,13 @@ footer ul {
 #social img:hover {
 	filter: invert(40%) sepia(100%) saturate(100%) hue-rotate(234deg) brightness(125%) contrast(103%);
 }
+footer a:hover {
+	color: var(--text);
+	text-decoration: underline;
+}
 footer p {
 	line-height: 1.7;
-	padding: .6em;
+	padding: .4em;
 	font-size: .9em;
 	text-align: center;
 	color: var(--link);

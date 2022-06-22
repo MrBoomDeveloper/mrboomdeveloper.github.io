@@ -70,6 +70,9 @@ h1 {
 h2 {
 	color: var(--category);
 }
+h3 {
+	font-family: 'Lato', sans-serif;
+}
 p {
 	color: var(--text);
 }
@@ -101,7 +104,8 @@ button.neon:disabled {
 	flex-wrap: wrap;
 }
 .tag {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	margin: .3em .3em;
 	padding: .6em 1em;
 	font-size: .8em;
@@ -111,50 +115,127 @@ button.neon:disabled {
 	background-color: var(--card-active);
 	text-align: center;
 }
-.tag:first-child {
-	margin-left: 0;
-}
-.tag.link {
-	display: flex;
-	align-items: center;
-}
-.tag.link img {
+.tag img {
 	height: 1.5rem;
 	margin-right: .8rem;
+}
+.tag:first-child {
+	margin-left: 0;
 }
 
 /*Custom Widgets*/
 
-.card {
+:is(card-product, card-button, card-simple, card-icon, card-small, card-layers) > div, card-simple img {
 	box-shadow: var(--shadow);
 	background-color: var(--card);
 	border-radius: .3rem;
 	max-width: 100%;
-}
-.card h3 {
-	font-family: 'Lato', sans-serif;
-}
-.clickable:is(.card, .tag) {
 	transition: .3s;
 }
-.clickable:is(.card, .tag):hover {
+:is(card-product, card-button, card-simple, card-icon, card-small, card-layers)[clickable]:hover > div, card-simple:hover img {
 	background-color: var(--card-active);
 	transform: scale(0.95);
 }
-.card.small {
+
+card-product .banner {
+	width: 100%;
+	border-radius: .3rem .3rem 0 0;
+}
+card-product .about {
+	padding: 1rem 1rem 1.6rem 1rem;
+}
+card-product h3 {
+	font-size: 1.4em;
+}
+card-product span {
+	color: var(--primary);
+	font-size: .95em;
+	margin: .4em 0;
+	display: block;
+}
+card-product p {
+	font-size: .9em;
+	line-height: 1.6;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+card-button > div {
+	display: flex;
+	align-items: center;
+	padding: 1.2rem;
+	padding-bottom: 1.3rem;
+}
+card-button h2 {
+	font-size: 1.4em;
+	margin-bottom: .2em;
+}
+card-button span {
+	margin: 0 1rem 0 1.5rem;
+	text-align: center;
+	color: var(--link);
+	font-size: 2em;
+	font-weight: 700;
+}
+card-button p {
+	margin-top: .6em;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+card-icon > div {
+	padding: 1rem;
+	text-align: center;
+}
+card-icon img {
+	height: 4rem;
+	width: 4rem;
+}
+card-icon h6 {
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+card-color {
+	box-shadow: var(--shadow);
+	border-radius: .3rem;
+	width: 100%;
+	padding: 1rem;
+}
+card-color p {
+	background: rgba(0, 0, 0, .25);
+	border-radius: .4em;
+	margin-top: .6em;
+	padding: .4em;
+	float: left;
+}
+
+.card-small {
 	padding: 1rem;
 	font-size: .8em;
 	line-height: 1.4;
 	transition: .2s;
+	
+	box-shadow: var(--shadow);
+	background-color: var(--card);
+	border-radius: .3rem;
+	max-width: 100%;
+	transition: .3s;
 }
-.card.small .about {
+.card-small .about {
 	display: inline-block;
 }
-.card.small p {
+.card-small p {
 	float: left;
 	margin-top: .3em;
 	font-size: 0.9em;
 }
+
 .card.layers {
 	border: solid var(--card) .2rem;
 	position: relative;
@@ -180,55 +261,6 @@ button.neon:disabled {
 	padding: 1rem;
 	position: absolute;
 	bottom: 0;
-}
-.card.product .banner {
-	width: 100%;
-	border-radius: .3rem .3rem 0 0;
-}
-.card.product .about {
-	padding: 1rem 1rem 1.6rem 1rem;
-}
-.card.product h3 {
-	font-size: 1.4em;
-}
-.card.product span {
-	color: var(--primary);
-	font-size: .95em;
-	margin: .4em 0;
-	display: block;
-}
-.card.product p {
-	font-size: .9em;
-	line-height: 1.6;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	line-clamp: 3;
-	-webkit-box-orient: vertical;
-}
-
-.card.button {
-	display: flex;
-	align-items: center;
-	padding: 1.2rem;
-	padding-bottom: 1.3rem;
-}
-.card.button h2 {
-	font-size: 1.4em;
-	margin-bottom: .2em;
-}
-.card.button span {
-	margin: 0 1rem 0 1.5rem;
-	text-align: center;
-	color: var(--link);
-	font-size: 2em;
-	font-weight: 700;
-}
-.card.button p {
-	margin-top: .6em;
-	font-size: 1em;
-	line-height: 1.5;
 }
 
 .switch {
@@ -262,31 +294,6 @@ input:checked + .slider { background-color: var(--primary) }
 input:checked + .slider:before {
 	transform: translateX(95%);
 	background-color: black;
-}
-
-#messages {
-	position: fixed;
-	z-index: 999;
-	right: 1rem;
-	bottom: 1rem;
-}
-#messages > div {
-	width: 15rem;
-	max-height: 0;
-	transform: translateX(150%);
-	transition: 1s, opacity .2s, transform .3s, margin .4s;
-}
-#messages > div.active {
-	max-height: 999px;
-	margin-top: .3rem;
-	transform: translateX(0);
-}
-#messages textarea {
-	margin-top: 1em;
-	background: black;
-	color: white;
-	height: min(50vh, 20rem);
-	width: 120%;
 }
 
 /*Layouts*/
@@ -338,4 +345,36 @@ header h2 {
 #popup > .wrapper {
 	position: relative;
 	height: 100%;
+}
+
+#messages {
+	position: fixed;
+	z-index: 999;
+	right: 1rem;
+	bottom: 1rem;
+}
+#messages > div {
+	box-shadow: var(--shadow);
+	background-color: var(--card);
+	border-radius: .3rem;
+	max-width: 100%;
+	transition: .3s;
+	padding: 1rem;
+	
+	width: 15rem;
+	max-height: 0;
+	transform: translateX(150%);
+	transition: 1s, opacity .2s, transform .3s, margin .4s;
+}
+#messages > div.active {
+	max-height: 999px;
+	margin-top: .3rem;
+	transform: translateX(0);
+}
+#messages textarea {
+	margin-top: 1em;
+	background: black;
+	color: white;
+	height: min(50vh, 20rem);
+	width: 120%;
 }

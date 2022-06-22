@@ -53,19 +53,6 @@ lottie-player {
 	grid-gap: 1rem;
 	margin-top: 2rem;
 }
-.skill {
-	padding: 1rem;
-	text-align: center;
-}
-.skill img {
-	height: 4rem;
-	width: 4rem;
-}
-.skill h6 {
-	margin-top: 1em;
-	font-size: 1em;
-	font-weight: 500;
-}
 
 .grid {
 	margin-top: 1.5em;
@@ -114,19 +101,18 @@ lottie-player {
 	flex-direction: column;
 	gap: .5rem;
 	padding: 1rem;
-	width: 100%;
 	position: absolute;
 	top: 12rem;
 	padding-bottom: 6rem;
 }
-#preview .about > h3 {
+#preview .about > div h3 {
 	margin-top: .8rem;
 	margin-bottom: .2rem;
 	color: #EEEEEE;
 }
 #preview .about hr {
 	opacity: .15;
-	margin: .2rem 0;
+	margin: .5rem 0;
 }
 #title {
 	font-size: 2em;
@@ -141,7 +127,7 @@ lottie-player {
 	font-size: .9em;
 }
 #rating {
-	margin-top: .4rem;
+	margin: .4rem 0;
 	padding: .8rem;
 	display: flex;
 	align-items: center;
@@ -173,6 +159,8 @@ lottie-player {
 	left: 0;
 	padding: 1rem;
 	width: 100%;
+}
+#actions > div {
 	display: flex;
 	gap: 1rem;
 }
@@ -181,6 +169,16 @@ lottie-player {
 }
 #actions button:not(:first-child) {
 	padding: .8em 1.2em;
+}
+
+#archive, #branding {
+	padding: 2rem 0;
+}
+:is(#archive, #branding) h2 {
+	margin: 3rem 0 2rem 0;
+}
+.colors {
+	grid-gap: .4rem;
 }
 
 
