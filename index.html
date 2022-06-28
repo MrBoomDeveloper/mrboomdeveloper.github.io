@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" itemscope itemtype="https://schema.org/Article">
 	<head>
-		<!--Makes site beautiful-->
+		<!-- Makes site beautiful -->
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<link rel="stylesheet" href="styles/boom.css" />
-		<link rel="stylesheet" href="styles/default.css" />
-		<link rel="stylesheet" href="styles/custom.css" />
+		<link rel="stylesheet" href="css/boom.css" />
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/custom.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<script src="scripts/boom.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/db.js"></script>
 		<script async src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 		
-		<!--For browsers-->
+		<!-- For browsers -->
 		<title>MrBoomDev - Фронтенд Разработчик</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
 		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
@@ -23,7 +23,7 @@
 		<link rel="manifest" href="scripts/site.webmanifest" />
 		<meta name="theme-color" content="#11071F" />
 		
-		<!--Index bots-->
+		<!-- Index bots -->
 		<meta itemprop="name" content="MrBoomDev - Фронтенд Разработчик" />
 		<meta property="og:title" content="MrBoomDev - Фронтенд Разработчик" />
 		<meta property="og:site_name" content="MrBoomDev - Фронтенд Разработчик" />
@@ -37,9 +37,12 @@
 		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Мистер, Мр, Бум, Мистр, МрБум, МистерБум, DroidStudio, Droid Studio" />
 		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
 		<meta name="yandex-verification" content="e99fcb399d946a57" />
+		
+		<!-- Yandex.Metrika counter -->
+		<script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(89331187, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true, ecommerce:"app" }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/89331187" style="position:absolute; left:-9999px"/></div></noscript> <!-- /Yandex.Metrika counter -->
 	</head>
 	<body onload="main.load()">
-		<div class="app">
+		<div id="app">
 			<header class="reveal">
 				<div class="content">
 					<h2>MrBoomDev</h2>
@@ -61,19 +64,19 @@
 			<section class="block reveal" id="aboutme">
 				<div class="content">
 					<div class="text">
-						<h2>Обо мне</h2>
-						<p>Меня зовут Денис и мне нравиться играть в мультиплееры. А в качестве хобби я создаю свои игры для мобильных устройств.</p>
-						<p>Также я люблю в свободное время рисовать различные сцены с моим персонажем (MrBoom). А нравится рисование своими просторами возможностей, ведь в одной картине можно рассказать от эмоций автора до целой захватывающей истории. А порой данное занятие дает мне идеи для новых интересных проектов.</p>
+						<h2 class="cat">Обо мне</h2>
+						<p class="reveal">Меня зовут Денис и мне нравиться играть в мультиплееры. А в качестве хобби я создаю свои игры для мобильных устройств.</p>
+						<p class="reveal">Также я люблю в свободное время рисовать различные сцены с моим персонажем (MrBoom). А нравится рисование своими просторами возможностей, ведь в одной картине можно рассказать от эмоций автора до целой захватывающей истории. А порой данное занятие дает мне идеи для новых интересных проектов.</p>
 					</div>
-					<lottie-player src="https://assets1.lottiefiles.com/animated_stickers/lf_tgs_j7miwfxd.json" loop autoplay></lottie-player>
+					<lottie-player class="top-margin-mobile" src="https://assets1.lottiefiles.com/animated_stickers/lf_tgs_j7miwfxd.json" loop autoplay></lottie-player>
 				</div>
 			</section>
 			
 			<section class="block swap reveal">
 				<div class="content">
-					<lottie-player src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
+					<lottie-player class="top-margin-mobile" src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
 					<div class="text">
-						<h2>Мои навыки</h2>
+						<h2 class="cat">Мои навыки</h2>
 						<div id="skills"></div>
 					</div>
 				</div>
@@ -81,11 +84,39 @@
 			
 			<section id="projects" class="block thicc projects reveal">
 				<div class="content"></div>
-				
 				<div class="content">
-					<a class="reveal" href="#" onclick="main.popup(2)">
-						<card-button clickable title="Загляните в архив" description="Там вы сможете найти все проекты, которые не попали на главную страницу."></card-button>
-					</a>
+					<card-button class="reveal" onclick="main.popup(2)" clickable title="Загляните в архив" description="Там вы сможете найти все проекты, которые не попали на главную страницу."></card-button>
+				</div>
+			</section>
+			
+			<section id="vids" class="block thicc reveal">
+				<div class="content">
+					<h2 class="cat">Недавние видео</h2>
+					<div id="videos" class="grid"></div>
+				</div>
+			</section>
+			
+			<section class="block thicc reveal">
+				<div class="content">
+					<h2 class="cat">Вопросы и Ответы</h2>
+					<div id="faq">
+						<card-faq id="faq_busy"
+							title="Почему ты так редко в сети?"
+							description="На данный момент я учусь в школе и у меня есть личная жизнь.">
+						</card-faq>
+						<card-faq id="faq_download" 
+							title="Почему проекты не скачиваются?"
+							description="Дело в том, что они до сих пор находятся в разработки. Следите за новостями в моем Discord сервере.">
+						</card-faq>
+						<card-faq id="faq_policy"
+							title="Зачем ты собираешь конфидециальную информацию?"
+							description="В основном эти данные используются для аналитики. А она нужна, чтобы понимать, над какими частями проектов стоит больше работать. Подробнее можно узнать на <a href='https://mrboomdeveloper.github.io/?page=privacy'>https://mrboomdeveloper.github.io/?page=privacy</a>.">
+						</card-faq>
+						<card-faq id="faq_os"
+							title="Будут ли игры на других платформах? Например на IOS"
+							description="К сожалению нет.">
+						</card-faq>
+					</div>
 				</div>
 			</section>
 			
@@ -124,10 +155,7 @@
 									<p id="tags"></p>
 									<hr noshade color="#FFE6FF" size="1" />
 									<p id="description"></p>
-									<div id="rating" class="card-small">
-										<h3>5.0</h3>
-										<h2>Минимальная версия Android</h2>
-									</div>
+									<card-rating score="5.0" title="Минимальная версия Android"></h2></card-rating>
 									<h3>Скриншоты</h3>
 									<div class="grid" id="screenshots"></div>
 								</div>
@@ -142,7 +170,7 @@
 						
 						<section id="branding">
 							<div class="content">
-								<h2>Цветовая палитра</h2>
+								<h2 class="cat">Цветовая палитра</h2>
 								<div class="grid colors">
 									<card-color code="#D05EFC"></card-color>
 									<card-color code="#FFE6FF"></card-color>
@@ -152,11 +180,11 @@
 									<card-color code="#140A23"></card-color>
 									<card-color code="#11071F"></card-color>
 								</div>
-								<h2>Изображения</h2>
+								<h2 class="cat">Изображения</h2>
 								<div class="grid">
-									<card-simple onclick="go('images/logo.png')" clickable><img src="images/logo.png" title="Логотип MrBoomDev" alt="Логотип MrBoomDev"></card-simple>
-									<card-simple onclick="go('images/icons/mrboom.jpg')" clickable><img src="images/icons/mrboom.jpg" title="Аватарка MrBoomDev" alt="Аватарка MrBoomDev"></card-simple>
-									<card-simple onclick="go('images/banners/yt.jpg')" clickable><img src="images/banners/yt.jpg" title="Шапка YouTube канала MrBoomDev" alt=Шапка YouTube канала MrBoomDev"></card-simple>
+									<card-simple onclick="go('images/logo.png')" clickable icon="images/logo.png" title="Логотип MrBoomDev"></card-simple>
+									<card-simple onclick="go('images/icons/mrboom.jpg')" clickable icon="images/icons/mrboom.jpg" title="Аватарка MrBoomDev"></card-simple>
+									<card-simple onclick="go('images/banners/yt.jpg')" clickable icon="images/banners/yt.jpg" title="Шапка YouTube канала MrBoomDev"></card-simple>
 								</div>
 							</div>
 						</section>
@@ -166,8 +194,10 @@
 						</section>
 						
 						<section id="privacy">
-							<h1>Скоро эта страница заработает!</h1>
+							<h1>Это не ваши данные, а наши</h1>
 						</section>
+						
+						<section id="design"></section>
 					</main>
 				</div>
 			</div>
