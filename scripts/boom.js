@@ -33,7 +33,7 @@ function reveal() {
 function loadDesign() {
 	const link  = document.createElement("link")
 	link.rel  = "stylesheet"
-	link.href = "https://mrboomdeveloper.github.io/styles/boom.css"
+	link.href = "https://mrboomdeveloper.github.io/css/boom.css"
 	element("head").appendChild(link)
 	console.log("BoomDesign was applied succesfully")
 }
