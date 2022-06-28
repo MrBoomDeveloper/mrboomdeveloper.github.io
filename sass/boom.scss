@@ -1,0 +1,129 @@
+/*!––––––––––––––––––––
+
+	Made by MrBoomDev in 2022
+	
+	Discord: https://bit.ly/mrboomdevds
+	YouTube: https://bit.ly/mrboomdevyt
+	VKontake: https://bit.ly/mrboomdevvk
+	
+––––––––––––––––––––*/
+
+//Reset
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+img, picture, video, canvas, svg, iframe {
+	display: block;
+	max-width: 100%;
+}
+
+//Variables
+
+@import "text", "cards", "layout";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+	--text: rgba(255, 245, 255, .95);
+	--link: #F2E6FF;
+	--category: #FFE6FF;
+	--primary: #D05EFC;
+	--card: #140A23;
+	--card-active: #1D112F;
+	--shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	--background: #11071F;
+	--panel: rgba(0, 0, 0, .1);
+}
+
+$border: solid;
+
+//Global
+
+::selection {
+	color: var(--link);
+	background-color: rgba(102, 0, 204, .5);
+}
+.reveal {
+	opacity: 0;
+	transition: 1s;
+}
+.revealed {
+	opacity: 1;
+	transition: 1s;
+}
+
+//Custom Widgets
+
+input-switch {
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 4em;
+		height: 2.2em;
+	}
+
+	input {
+		display: none;
+		
+		&:not(:checked) + .slider {
+			outline: $border .16em var(--link);
+		}
+		
+		&:checked + .slider {
+			background-color: var(--primary);
+		
+			&:before {
+				transform: translateX(1.8em);
+				background-color: var(--card);
+			}
+		}
+	}
+
+	.slider {
+		position: absolute;
+		border-radius: 2.2em;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--card-active);
+		transition: .2s;
+
+		&:before {
+			position: absolute;
+			border-radius: 50%;
+			content: "";
+			height: 1.7em;
+			width: 1.7em;
+			left: .2em;
+			top: .24em;
+			background-color: var(--link);
+			transition: .2s;
+		}
+	}
+}
+	
+	
+.setting {
+	margin: .5rem 0;
+		
+	> div {
+		display: grid;
+		grid-template-columns: 1fr 5em;
+	}
+
+	input-switch {
+		margin: auto;
+		margin-top: .2em;
+		float: right;
+	}
+}

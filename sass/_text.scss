@@ -1,0 +1,75 @@
+@mixin hoverline() {
+	&:hover {
+		color: var(--text);
+		text-decoration: underline;
+	}
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, li, label, span, button, textarea, input, select, img {
+	font-family: sans-serif;
+	color: white;
+	line-height: 1.2;
+	vertical-align: baseline;
+}
+
+a {
+	overflow-wrap: break-word;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	&:not(hover) { color: var(--link) }
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif }
+p { color: var(--text) }
+ol, ul { list-style-type: none }
+button { -webkit-tap-highlight-color: transparent }
+img { line-height: 1 }
+
+button[neon] {
+	padding: .8em 2em;
+	border: solid var(--primary) 1px;
+	border-radius: 2px;
+	font-size: 1em;
+	color: var(--primary);
+	background-color: rgba(17, 7, 31, .4);
+	transition: .2s;
+	
+	span { color: var(--primary) }
+	
+	&:disabled { opacity: .75 }
+
+	&:hover:not(:disabled) {
+		color: black;
+		background-color: var(--primary);
+		transform: scale(.95);
+	
+		span { color: black }
+	}
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+.tag {
+	display: flex;
+	align-items: center;
+	margin: .3em .3em;
+	padding: .6em 1em;
+	font-size: .8em;
+	font-weight: 500;
+	border-radius: 5px;
+	box-shadow: var(--shadow);
+	background-color: var(--card-active);
+	text-align: center;
+
+	img {
+		height: 1.5rem;
+		margin-right: .8rem;
+	}
+	&:first-child { margin-left: 0 }
+}

@@ -1,0 +1,199 @@
+%card {
+	> div, > img {
+		display: block;
+		box-shadow: var(--shadow);
+		background-color: var(--card);
+		border-radius: .3rem;
+		max-width: 100%;
+		transition: .3s;
+	}
+	&[clickable]:hover {
+		> div, > img {
+			background-color: var(--card-active);
+			transform: scale(0.95);
+		}
+	}
+}
+
+card-simple { @extend %card }
+
+card-product { @extend %card;
+	.banner {
+		width: 100%;
+		border-radius: .3rem .3rem 0 0;
+	}
+	.about { padding: 1rem 1rem 1.6rem 1rem }
+	h3 { font-size: 1.4em }
+	span {
+		color: var(--primary);
+		font-size: .95em;
+		margin: .4em 0;
+		display: block;
+	}
+	p {
+		font-size: .9em;
+		line-height: 1.6;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+}
+
+card-button { @extend %card;
+	> div {
+		display: flex;
+		align-items: center;
+		padding: 1.2rem;
+		padding-bottom: 1.3rem;
+	}
+	.about { flex-grow: 1 }
+	h2 {
+		font-size: 1.4em;
+		margin-bottom: .2em;
+		color: var(--category);
+	}
+	span {
+		margin: 0 1rem 0 1.5rem;
+		text-align: center;
+		color: var(--link);
+		font-size: 2em;
+		font-weight: 700;
+	}
+	p {
+		margin-top: .6em;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+}
+
+card-icon { @extend %card;
+	> div {
+		padding: 1rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	img {
+		height: 4rem;
+		width: 4rem;
+	}
+	h6 {
+		margin-top: 1em;
+		font-size: 1em;
+		font-weight: 500;
+	}
+}
+
+card-color { @extend %card;
+	box-shadow: var(--shadow);
+	border-radius: .3rem;
+	width: 100%;
+	padding: .6rem;
+
+	p {
+		background: rgba(0, 0, 0, .25);
+		border-radius: .4em;
+		margin-top: 1.2em;
+		padding: .4em;
+		float: left;
+	}
+}
+
+card-small { @extend %card;
+	> div {
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: .4em;
+		
+		p { font-size: 0.9em }
+	}
+}
+
+card-rating { @extend %card;
+	> div {
+		margin: .4rem 0;
+		padding: .8rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		line-height: auto;
+
+		h3 {
+			background-color: #7444bb;
+			font-size: 1.2em;
+			border-radius: .2em;
+			padding: .4em;
+			margin-top: 0 !important;
+		}
+		h2 { font-size: 1.2em }
+	}
+}
+
+card-layers {
+	border: solid var(--card) .2rem;
+	position: relative;
+	transition: .3s;
+	
+	&:hover[clickable] { transform: scale(0.95) }
+
+	.banner {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: .3rem;
+	}
+	.shadow {
+		top: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		height: 100%;
+		background-image: linear-gradient(
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, .8) 100%
+		);
+	}
+	.about {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+card-faq {
+	display: block;
+	background-color: var(--card);
+	transition: .3s;
+	
+	.accordion {
+		border: none;
+		outline: none;
+		padding: 1.4em;
+		text-align: left;
+		line-height: 1.7;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.panel {
+		font-size: .9em;
+		padding: 0 1.4em;
+		max-height: 0;
+		overflow: hidden;
+		transition: .3s;
+	}
+	
+	&:hover { background-color: var(--card-active) }
+	
+	&.active {
+		padding-bottom: 1rem;
+		.accordion { padding-bottom: 1em }
+	}
+}

@@ -1,0 +1,128 @@
+.content {
+	margin: auto;
+	width: min(50rem, 90%);
+}
+
+html {
+	background-color: var(--background);
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+body {
+	background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .05));
+}
+#app {
+	overflow: hidden;
+	width: 100%;
+}
+header, aside, footer {
+	background-color: var(--panel);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	min-height: 4rem;
+	padding: 1rem;
+
+	> * {
+		flex-wrap: wrap;
+	}
+	h2 {
+		flex-grow: 1;
+		color: var(--primary);
+	}
+	nav a {
+		@include hoverline();
+	}
+}
+
+#burger {
+	width: 1.8rem;
+	height: 2rem;
+	display: none;
+	flex-direction: column;
+	gap: .4em;
+	align-items: center;
+	justify-content: center;
+	
+	span {
+		height: 2px;
+		width: 100%;
+		background: var(--category);
+		transition: 0.25s;
+	}
+	&.active {
+		span:nth-child(1) { transform: rotate(-45deg) translate(-6px, 6px)}
+		span:nth-child(2) { opacity: 0 }
+		span:nth-child(3) { transform: rotate(45deg) translate(-6px, -6px)}
+	}
+}
+
+footer a {
+	@include hoverline();
+}
+
+#popup {
+	width: 100%;
+	height: 100%;
+	background: var(--background);
+	position: fixed;
+	z-index: 999;
+	overflow-y: scroll;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: transform .3s, height .5s, opacity .6s;
+	
+	> .wrapper {
+		position: relative;
+		height: 100%;
+	}
+
+	&.reveal {
+		transform: translateY(-150%);
+		height: 75%;
+		opacity: .0;
+		transition: .3s;
+	}
+}
+
+#messages {
+	position: fixed;
+	z-index: 999;
+	right: 1rem;
+	bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+	
+	card-small {
+		div {
+			width: 12rem;
+			padding: 0;
+			max-height: 0;
+			transform: translateX(150%);
+			transition: 1s, transform .3s, max-height .4s, padding .3s;
+		
+			textarea {
+				margin-top: 1em;
+				background: black;
+				color: white;
+				height: min(50vh, 20rem);
+				width: 100%;
+			}
+		}
+		
+		&.active div {
+			padding: 1rem;
+			max-height: 999px;
+			transform: translateX(0);
+		}
+		&.destroy div {
+			padding: 1rem;
+			transform: translateY(100%);
+			transition: .1s;
+		}
+	}
+}
