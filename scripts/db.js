@@ -21,7 +21,9 @@ design.list = [
 	{title: "Подключаем BoomDesign", code: "Baradwr", content: '<lottie-player src="https://assets3.lottiefiles.com/animated_stickers/lf_tgs_7maftaja.json" loop autoplay></lottie-player>'},
 	{title: "Карточка с продуктом", code: "RwMwgWX", content: '<card-product clickable title="Заголовок" tags="Теги" description="Описание" banner="https://mrboomdeveloper.github.io/images/banners/not_found.jpg"></card-product>'},
 	{title: "Карточка с цветом", code: "yLKLzxV", content: '<card-color code="#D05EFC"></card-color>'},
+	{title: "Карточка рейтинг", code: "VwXwrQZ", content: '<card-rating score="9.9" title="Супер пупер рейтинг"></card-rating>'},
 	{title: "Карточка кнопка", code: "LYdYjJx", content: '<card-button clickable title="Загаловок" description="Описание"></card-button>'},
+	{title: "Карточка кардион", code: "wvmvPYd", content: '<card-faq id="required_id" title="Отель?" description="Триваго!"></card-faq>'},
 	{title: "Карточка иконка", code: "yLKLzEa", content: '<card-icon clickable icon="https://mrboomdeveloper.github.io/images/icons/android.svg" title="Загаловок"></card-icon>'},
 	{title: "Простая карточка", code: "poLoWay", content: '<card-simple clickable icon="https://mrboomdeveloper.github.io/images/banners/not_found.jpg"></card-simple>'}
 ]
