@@ -209,7 +209,7 @@ class CardColor extends HTMLElement {
 	constructor() { super() }
 
 	connectedCallback () {
-		this.innerHTML = `<div><p>${this.getAttribute("code")}</p></div>`
+		this.innerHTML = `<p>${this.getAttribute("code")}</p>`
 		this.style.backgroundColor = this.getAttribute("code")
 	}
 }
