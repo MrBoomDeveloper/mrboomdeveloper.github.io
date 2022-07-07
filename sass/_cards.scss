@@ -111,7 +111,10 @@ card-small { @extend %card;
 		flex-direction: column;
 		gap: .4em;
 		
-		p { font-size: 0.9em }
+		p {
+			font-size: 0.9em;
+			line-height: 1.5;
+		}
 	}
 }
 
@@ -169,6 +172,28 @@ card-layers {
 	}
 }
 
+card-setting { @extend %card;
+	> div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+	.text {
+		flex-grow: 1;
+		margin-right: 2rem;
+	}
+	p {
+		line-height: 1.4;
+		margin-top: .4em;
+		font-size: .9em;
+	}
+	input-switch {
+		font-size: .8em;
+		margin-right: .5em;
+	}
+}
+
 card-faq {
 	display: block;
 	border-radius: .3rem;
@@ -182,6 +207,7 @@ card-faq {
 		text-align: left;
 		line-height: 1.7;
 		background-color: rgba(0, 0, 0, 0);
+		transition: .3s;
 	}
 
 	.panel {

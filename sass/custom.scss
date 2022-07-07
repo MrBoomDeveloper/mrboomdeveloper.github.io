@@ -36,7 +36,6 @@ lottie-player {
 }
 
 .cat {
-	font-size: 1.6em;
 	color: var(--category);
 	margin-bottom: .5em;
 		
@@ -187,6 +186,34 @@ lottie-player {
 }
 .colors { grid-gap: .4rem }
 #design .cat:not(#first) { margin: 0rem 0 2rem 0 }
+
+#privacy, #terms {
+	padding: 3rem 0;
+	
+	h1, h2, h3 {
+		margin: 1em 0 .7em 0;
+		line-height: 1.5;
+		display: block;
+	}
+	.cat {
+		margin-bottom: .6em;
+	}
+	p {
+		display: block;
+		margin-top: .4em;
+		line-height: 1.6;
+	}
+	ul {
+		padding-left: 1rem;
+		list-style-type: disc;
+		margin: .5rem 0;
+	}
+	li {
+		margin: .4em 0;
+		color: var(--text);
+		line-height: 1.6;
+	}
+}
 
 
 //Desktop version

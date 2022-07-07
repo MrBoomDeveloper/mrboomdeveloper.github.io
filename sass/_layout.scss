@@ -95,9 +95,11 @@ footer a {
 	bottom: 1rem;
 	display: flex;
 	flex-direction: column;
-	gap: .4rem;
 	
 	card-small {
+		transition: 1s;
+		margin-top: .4rem;
+		
 		div {
 			width: 12rem;
 			padding: 0;
@@ -122,7 +124,8 @@ footer a {
 		&.destroy div {
 			padding: 1rem;
 			transform: translateY(100%);
-			transition: .1s;
+			transition: .2s;
+			opacity: .7;
 		}
 	}
 }

@@ -51,6 +51,19 @@ button[neon] {
 	}
 }
 
+textarea[neon] {
+	padding: .4em;
+	border: solid rgba(255, 255, 255, .5) 1px;
+	border-radius: .2em;
+	background-color: var(--card);
+    outline: none;
+    transition: .3s;
+    &:focus {
+    	border: solid white 1px;
+    	background-color: var(--card-active);
+    }
+}
+
 .tags {
 	display: flex;
 	flex-wrap: wrap;
