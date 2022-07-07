@@ -48,15 +48,9 @@ const cookies = {
 }
 
 function alert(title, description, time) {
-	if(!loaded) return
-	if(description == undefined) {
-		time = 3000
-		description = "Undefined description"
-	}
-	
 	const message = document.createElement("card-small")
 	message.setAttribute("title", title)
-	message.setAttribute("description", description)
+	message.setAttribute("description", description || "")
 	element("#messages").appendChild(message)
 	
 	new Promise(next => 
@@ -65,15 +59,38 @@ function alert(title, description, time) {
 		setTimeout(() => {
 			message.className = "destroy"
 			setTimeout(() => message.remove(), 250)
-		}, time)
+		}, time || 2500)
 	})
 }
 
 const console = {
-	log: text => { if(cookies.get("logs") == "true") alert("Console Log", text, 2000) },
+	log: text => { if(cookies.get("logs")) alert("Console Log", text, 2000) },
 	error: text => { alert("An error has occurred", text, 5000) },
 	warn: text => { alert("Sorry", text, 3000) },
-	debug: text => { if(cookies.get("logs")) alert("Console Debug", `<textarea>${text}</textarea>`, 60000) }
+	debug: (text, id) => { if(cookies.get("logs")) new Dialog(`dialog-debug-` + id).text(`<textarea neon>${text}</textarea>`) }
+}
+
+class Dialog {
+	constructor(id) { this.id = id }
+	show(html) {
+		console.log(`Show dialog with id ${this.id}`)
+		const dia = document.createElement("div")
+		dia.id = this.id
+		dia.className = "dialog"
+		dia.innerHTML = html
+		element("body").appendChild(dia)
+		element(`#${this.id} .close`).addEventListener('click', (() => this.close(this.id)))
+		setTimeout(() => dia.classList.add("active"), 100)
+	}
+	close() {
+		const dia = element(`#${this.id}`)
+		dia.classList.remove("active")
+		setTimeout(() => dia.remove(), 200)
+	}
+	
+	text(txt) {
+		this.show(`<div class="content text">${txt}<button neon class="close">Continue</button></div>`)
+	}
 }
 
 Number.prototype.zeros = function() {
@@ -98,10 +115,8 @@ Number.prototype.isEven = function() {
 	return this % 2 == 0
 }
 
-String.prototype.insert = function(index, string) {
-	if (index > 0) {
-		return this.substring(0, index) + string + this.substr(index)
-	}
+String.prototype.insert = function(index = 0, string) {
+	if (index > 0) return this.substring(0, index) + string + this.substr(index)
 	return string + this
 }
 
@@ -136,51 +151,35 @@ window.addEventListener("load", () => {
 
 /*Custom elements*/
 
-class CardSetting extends HTMLElement {
-	constructor() { super() }
-
-	connectedCallback () {
-		//TODO: finish
-		this.innerHTML = `<div class="about">${this.innerHTML}</div>`
-	}
-}
-
 class CardProduct extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
-		this.innerHTML = `
-			<div>
-				<img class="banner" src="${this.getAttribute("banner")}" title="${this.getAttribute("title")}" alt="${this.getAttribute("title")}"/>
-				<div class="about">
-					<h3>${this.getAttribute("title")}</h3>
-					<span>${this.getAttribute("tags")}</span>
-					<p>${this.getAttribute("description")}</p>
-				</div>
+		this.innerHTML = `<div>
+			<img class="banner" src="${this.getAttribute("banner")}" title="${this.getAttribute("title")}" alt="${this.getAttribute("title")}"/>
+			<div class="about">
+				<h3>${this.getAttribute("title")}</h3>
+				<span>${this.getAttribute("tags")}</span>
+				<p>${this.getAttribute("description")}</p>
 			</div>
-		`
+		</div>`
 	}
 }
 
 class CardButton extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
-		this.innerHTML = `
-			<div>
-				<div class="about">
-					<h2>${this.getAttribute("title")}</h2>
-					<p>${this.getAttribute("description")}</p>
-				</div>
-				<span>&#62;</span>
+		this.innerHTML = `<div>
+			<div class="about">
+				<h2>${this.getAttribute("title")}</h2>
+				<p>${this.getAttribute("description")}</p>
 			</div>
-		`
+			<span>&#62;</span>
+		</div>`
 	}
 }
 
 class CardSimple extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		let html = ""
 		if(this.getAttribute("google") == undefined) {
@@ -196,7 +195,6 @@ class CardSimple extends HTMLElement {
 
 class CardIcon extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		this.innerHTML = `<div>
 			<img src="${this.getAttribute("icon")}" title="${this.getAttribute("title")}" alt="${this.getAttribute("title")}"/>
@@ -207,7 +205,6 @@ class CardIcon extends HTMLElement {
 
 class CardColor extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		this.innerHTML = `<p>${this.getAttribute("code")}</p>`
 		this.style.backgroundColor = this.getAttribute("code")
@@ -216,7 +213,6 @@ class CardColor extends HTMLElement {
 
 class CardLayers extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		this.innerHTML = `<div>
 			<img class="banner" src="${this.getAttribute("banner")}"/>
@@ -228,12 +224,11 @@ class CardLayers extends HTMLElement {
 
 class InputSwitch extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		let html = ""
 		const key = this.getAttribute("key")
 		html = `<label for="${key}_switch" class="switch"><input type="checkbox" `
-		if(cookies.get(key) == "true") html += "checked "
+		if(cookies.get(key)) html += "checked "
 		html += `name="${key}_switch" value="${key}_switch" id="${key}_switch"
 						onchange="cookies.set('${key}', event.currentTarget.checked)">
 						<span class="slider"></span></label>`
@@ -243,30 +238,36 @@ class InputSwitch extends HTMLElement {
 
 class CardRating extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		this.innerHTML = `<div><h3>${this.getAttribute("score")}</h3>
-										<h2>${this.getAttribute("title")}</h2></div>`
+		<h2>${this.getAttribute("title")}</h2></div>`
 	}
 }
 
 class CardSmall extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		this.innerHTML = `<div><h4>${this.getAttribute("title")}</h4>
-										<p>${this.getAttribute("description")}</p></div>`
+		<p>${this.getAttribute("description")}</p></div>`
+	}
+}
+
+class CardSetting extends HTMLElement {
+	constructor() { super() }
+	connectedCallback () {
+		this.innerHTML = `<div><div class="text">
+		<h4>${this.getAttribute("title")}</h4><p>${this.getAttribute("description")}</p></div>
+		<input-switch key="${this.getAttribute('key')}" checked="${cookies.get(this.getAttribute('key'))}"></input-switch></div>`
 	}
 }
 
 class CardFaq extends HTMLElement {
 	constructor() { super() }
-
 	connectedCallback () {
 		const name = this.id
 		this.innerHTML = `
-			<button class="accordion" id="faq1_${name}">${this.getAttribute("title")}</button>
-			<div class="panel" id="faq2_${name}"><p>${this.getAttribute("description")}</p></div>`
+		<button class="accordion" id="faq1_${name}">${this.getAttribute("title")}</button>
+		<div class="panel" id="faq2_${name}"><p>${this.getAttribute("description")}</p></div>`
 		
 		let active = false
 		this.addEventListener('click', () => {

@@ -30,6 +30,9 @@ const main = {
 			case "design":
 				this.popup(4)
 				break
+			case "terms":
+				this.popup(5)
+				break
 			default:
 				console.error("404 page not found")
 				break
@@ -40,15 +43,17 @@ const main = {
 		popup = true;
 		switch(id) {
 			case 0:
-				result = "project"; break;
+				result = "project"; break
 			case 1:
-				result = "branding"; break;
+				result = "branding"; break
 			case 2:
-				result = "archive"; break;
+				result = "archive"; break
 			case 3:
-				result = "privacy"; break;
+				result = "privacy"; break
 			case 4:
-				result = "design"; break;
+				result = "design"; break
+			case 5:
+				result = "terms"; break
 		}
 		if(id == 0) result += `&id=${projects.current}`
 		history.replaceState({page: 1}, "Popup", `?page=${result}`)
@@ -148,7 +153,7 @@ const projects = {
 				} else {
 					html += `<card-product onclick="go('${object.link}')"`
 				}
-				html += ` clickable title="${object.name}" tags="${object.tags.join(', ')}" description="${object.description || object.link}" banner="./images/banners/${object.banner}"></card-product>`
+				html += ` clickable title="${object.name}" tags="${object.tags.join(', ')}" description="${object.description || object.link}" banner="./images/banners/${object.id}.jpg"></card-product>`
 			}
 			html += '</div>'
 		}
@@ -158,7 +163,7 @@ const projects = {
 	open: function(id) {
 		this.current = id
 		media = this.all[id]
-		element("#banner").src = `./images/banners/${media.banner}`
+		element("#banner").src = `./images/banners/${media.id}.jpg`
 		element("#title").innerHTML = media.name
 		tags = media.tags
 		for(var i = 0; i < tags.length; i++) {
@@ -170,9 +175,10 @@ const projects = {
 		}
 		element("#tags").innerHTML = html; html = ""
 		element("#description").innerHTML = media.description
-		for(var i = 0; i < media.screenshots.length; i++) {
-			html += `<a target="_blank" href="./images/banners/${media.screenshots[i]}"><card-simple clickable icon="./images/banners/${media.screenshots[i]}"></card-simple></a>`
+		for(var i = 1; i < 6; i++) {
+			html += `<a target="_blank" href="./images/screenshots/${media.id}${i}.jpg"><card-simple clickable icon="./images/screenshots/${media.id}${i}.jpg"></card-simple></a>`
 		}
+		//console.debug(html, "pol")
 		element("#screenshots").innerHTML = html; html = ""
 		main.popup(0)
 	},

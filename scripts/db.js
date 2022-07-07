@@ -18,14 +18,14 @@ skills.list = [
 ]
 
 design.list = [
-	{title: "Подключаем BoomDesign", code: "Baradwr", content: '<lottie-player src="https://assets3.lottiefiles.com/animated_stickers/lf_tgs_7maftaja.json" loop autoplay></lottie-player>'},
+	{title: "Подключаем BoomDesign", code: "Baradwr", content: '<lottie-player src="https://assets3.lottiefiles.com/animated_stickers/lf_tgs_7maftaja.json" loop autoplay intermission="0"></lottie-player>'},
 	{title: "Карточка с продуктом", code: "RwMwgWX", content: '<card-product clickable title="Заголовок" tags="Теги" description="Описание" banner="https://mrboomdeveloper.github.io/images/banners/not_found.jpg"></card-product>'},
 	{title: "Карточка с цветом", code: "yLKLzxV", content: '<card-color code="#D05EFC"></card-color>'},
 	{title: "Карточка рейтинг", code: "VwXwrQZ", content: '<card-rating score="9.9" title="Супер пупер рейтинг"></card-rating>'},
 	{title: "Карточка кнопка", code: "LYdYjJx", content: '<card-button clickable title="Загаловок" description="Описание"></card-button>'},
 	{title: "Карточка кардион", code: "wvmvPYd", content: '<card-faq id="required_id" title="Отель?" description="Триваго!"></card-faq>'},
 	{title: "Карточка иконка", code: "yLKLzEa", content: '<card-icon clickable icon="https://mrboomdeveloper.github.io/images/icons/android.svg" title="Загаловок"></card-icon>'},
-	{title: "Простая карточка", code: "poLoWay", content: '<card-simple clickable icon="https://mrboomdeveloper.github.io/images/banners/not_found.jpg"></card-simple>'}
+	{title: "Простая карточка", code: "poLoWay", content: '<card-simple clickable title="Секретный текст" icon="https://mrboomdeveloper.github.io/images/banners/not_found.jpg"></card-simple>'}
 ]
 
 footer.social = [
@@ -39,27 +39,26 @@ footer.links = [
 	{title: "BoomDesign", popup: 4},
 	{title: "Архив Данных", popup: 2},
 	{title: "Мой Плейлист", link: "https://bit.ly/mrboomdevplay"},
-	{title: "Ваша Конфиденциальность", popup: 3}
+	{title: "Политика Конфиденциальности", popup: 3},
+	{title: "Пользовательское Соглашение", popup: 5}
 ]
 
 projects.all = [
 	{ //0
-		name: "BoomStudio", banner: "boomstudio.jpg",
+		name: "BoomStudio", id: "studio",
 		description: "Мобильный редактор кода, позволяющий использовать систему контроля версий. В данный момент в стадии замедленной разработки.<br>Во время разработки был упор на мультизадачность. Это значит что в боковом меню одновременно будут показаны все папки и файлы открытого проекта. Сверху кода распологаются кнопки быстрого действия, а под ними открытые в данный момент файлы.",
 		tags: ["Java, Android"],
-		screenshots: ["not_found.jpg", "not_found.jpg", "not_found.jpg"],
 		link: "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip"
 	}, { //1
-		name: "FNaF Multiplayer", banner: "not_found.jpg",
-		description: "Мобильный экшен-платформер про выживание и схватку одержимымых аниматроников.",
+		name: "FNaF Multiplayer", id: "fnafm",
+		description: "A mobile action-platformer about survival and the fight of possessed animatronics<br>Key features:<br>• Many different skins, boosts and skills<br>• Exciting gameplay with players from all over the world<br>• Build and customize your animatronic.",
 		tags: ["Java, Firebase, Android"],
-		screenshots: ["fnafm_screenshot1.png", "fnafm_screenshot2.png", "fnafm_screenshot3.png"],
 		link: "404"
 	}, { //2
-		name: "Bear's Kitchen", banner: "not_found.jpg",
+		name: "Bear's Kitchen", id: "kitchen",
 		description: "Не желаете ли вы устроиться в нашей пиццерии? У нас бесплатная пицца для сотрудников!",
 		tags: ["Pocket Code, Android"],
-		screenshots: ["not_found.jpg", "not_found.jpg", "not_found.jpg"],
+
 		link: "404"
 	},
 	{ //3
