@@ -44,58 +44,41 @@ footer.links = [
 ]
 
 projects.all = [
-	{ //0
-		name: "BoomStudio", id: "studio",
-		description: "Мобильный редактор кода, позволяющий использовать систему контроля версий. В данный момент в стадии замедленной разработки.<br>Во время разработки был упор на мультизадачность. Это значит что в боковом меню одновременно будут показаны все папки и файлы открытого проекта. Сверху кода распологаются кнопки быстрого действия, а под ними открытые в данный момент файлы.",
-		tags: ["Java, Android"],
-		link: "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip"
+	{ // 0
+		name: "BoomStudio", id: "studio", tags: ["Java, Android"], link: "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip",
+		description: "Мобильный редактор кода, позволяющий использовать систему контроля версий. В данный момент в стадии замедленной разработки.<br>Во время разработки был упор на мультизадачность. Это значит что в боковом меню одновременно будут показаны все папки и файлы открытого проекта. Сверху кода распологаются кнопки быстрого действия, а под ними открытые в данный момент файлы."
 	}, { //1
-		name: "FNaF Multiplayer", id: "fnafm",
-		description: "A mobile action-platformer about survival and the fight of possessed animatronics<br>Key features:<br>• Many different skins, boosts and skills<br>• Exciting gameplay with players from all over the world<br>• Build and customize your animatronic.",
-		tags: ["Java, Firebase, Android"],
-		link: "404"
+		name: "FNaF Multiplayer", id: "fnafm", tags: ["Java, Firebase, Android"], link: "https://gamejolt.com/games/fnafmultiplayer/670228",
+		description: "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами.<br>- Ключевые особенности:<br>• Множество различных скинов, бустов и умений<br>• Захватывающий геймплей с игроками со всего мира<br>• Создавайте и настраивайте своего аниматроника.",
 	}, { //2
-		name: "Bear's Kitchen", id: "kitchen",
-		description: "Не желаете ли вы устроиться в нашей пиццерии? У нас бесплатная пицца для сотрудников!",
-		tags: ["Pocket Code, Android"],
-
-		link: "404"
-	},
-	{ //3
-		name: "Granny 2D", banner: "not_found.jpg",
-		tags: ["Pocket Code, Android"],
+		name: "Bear's Kitchen", id: "kitchen", tags: ["Pocket Code, Android"], link: "https://gamejolt.com/games/PizzaAndroid/401141",
+		description: "Не желаете ли вы устроиться в нашей пиццерии? У нас бесплатная пицца для сотрудников!"
+	}, { //3
+		name: "Granny 2D", id: "granny", tags: ["Pocket Code, Android"],
 		link: "https://share.catrob.at/app/project/77618"
 	}, { //4
-		name: "Five Nights at Freddy's 7", banner: "not_found.jpg",
-		tags: ["Pocket Code, Android"],
+		name: "Five Nights at Freddy's 7", id: "fnaf7", tags: ["Pocket Code, Android"],
 		link: "https://share.catrob.at/app/project/57826"
 	}, { //5
-		name: "FNaF Sniffing Simulator", banner: "not_found.jpg",
-		tags: ["Java, Android"],
+		name: "FNaF Sniffing Simulator", id: "sniff", tags: ["Java, Android"],
 		link: "https://gamejolt.com/games/sniffsimandroid/504854"
 	}, { //6
-		name: "FNaF Non-AR", banner: "not_found.jpg",
-		tags: ["Java, Firebase, Android"],
+		name: "FNaF Non-AR", id: "fnafar", tags: ["Java, Firebase, Android"],
 		link: "https://gamejolt.com/games/fnafnonar/462486"
 	}, { //7
-		name: "FNaF 4: 8 Bit Remake", banner: "not_found.jpg",
-		tags: ["Pocket Code, Android"],
+		name: "FNaF 4: 8 Bit Remake", id: "fnaf48", tags: ["Pocket Code, Android"],
 		link: "https://share.catrob.at/app/project/93902"
 	}, { //8
-		name: "Jollibee's Multiplayer", banner: "not_found.jpg",
-		tags: ["Java, Firebase, Android"],
+		name: "Jollibee's Multiplayer", id: "jolli", tags: ["Java, Firebase, Android"],
 		link: "https://gamejolt.com/p/the-project-got-deleted-it-s-all-gone-so-we-are-rebranding-it-int-3qzdr92w"
 	}, { //9
-		name: "Мой третий сайт", banner: "simplesite.jpg",
-		tags: ["SimpleSite"],
+		name: "Мой третий сайт", id: "simplesite", tags: ["SimpleSite"],
 		link: "http://mrboom1.simplesite.com/442672397"
 	}, { //10
-		name: "Сайт для Ultimate Custom Night Meme Edition", banner: "site2.jpg",
-		tags: ["HTML, CSS, JS"],
+		name: "Сайт для Ultimate Custom Night Meme Edition", id: "site2", tags: ["HTML, CSS, JS"],
 		link: "https://mrboom1.gamejolt.io/ucnmeme"
 	}, { //11
-		name: " Мой самый первый сайт", banner: "site1.jpg",
-		tags: ["HTML, CSS"],
+		name: " Мой самый первый сайт", id: "site1", tags: ["HTML, CSS"],
 		link: "https://mrboom1.gamejolt.io"
 	}
 ]
